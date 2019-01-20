@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.sf.smc</groupId>
+    <artifactId>smc</artifactId>
+    <version>7.0.0</version>
+    <packaging>pom</packaging>
+    <name>smc - State Machine Compiler</name>
+    <description>
+      Translates a finite state machine definition into one of 15
+      target programming languages.
+    </description>
+    <url>http://smc.sourceforge.net/</url>
+
+    <licenses>
+      <license>
+        <name>Mozilla Public License, Version 1.1</name>
+        <url>https://www.mozilla.org/media/MPL/1.1/index.0c5913925d40.txt</url>
+        <distribution>repo</distribution>
+      </license>
+      <license>
+        <name>GNU Public License, Version 2.0</name>
+        <url>https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt</url>
+        <distribution>repo</distribution>
+      </license>
+    </licenses>
+
+    <scm>
+      <url>https://sourceforge.net/p/smc/git-code/ci/master/tree/</url>
+    </scm>
+
+    <developers>
+      <developer>
+        <id>cwrapp</id>
+        <name>Charles W. Rapp</name>
+        <email>rapp@acm.org</email>
+        <url></url>
+        <roles>
+          <role>architect</role>
+          <role>developer</role>
+          <role>administrator</role>
+        </roles>
+        <timezone>
+        </timezone>
+      </developer>
+      <developer>
+        <id>fperrad</id>
+        <name>Francois Perrad</name>
+        <email></email>
+        <url></url>
+        <roles>
+          <role>developer</role>
+        </roles>
+        <timezone>
+        </timezone>
+      </developer>
+    </developers>
+
+    <contributors>
+      <contributor>
+        <name>Eitan Suez</name>
+        <roles>
+          <role>developer</role>
+        </roles>
+      </contributor>
+      <contributor>
+        <name>Chris Liscio</name>
+        <roles>
+          <role>developer</role>
+        </roles>
+      </contributor>
+      <contributor>
+        <name>Toni Arnold</name>
+        <roles>
+          <role>developer</role>
+        </roles>
+      </contributor>
+      <contributor>
+        <name>Paul Millar</name>
+        <roles>
+          <role>developer</role>
+        </roles>
+      </contributor>
+    </contributors>
+
+    <modules>
+        <module>parser</module>
+        <module>model</module>
+        <module>generator</module>
+        <module>main</module>
+        <module>library</module>
+        <module>smc-maven-plugin</module>
+        <module>example-java-ex6</module>
+    </modules>
+
+    <distributionManagement>
+      <snapshotRepository>
+        <id>ossrh</id>
+        <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      </snapshotRepository>
+      <repository>
+        <id>ossrh</id>
+        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+      </repository>
+    </distributionManagement>
+
+    <build>
+      <plugins>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>3.0.1</version>
+
+          <executions>
+            <execution>
+              <id>attach-sources</id>
+              <goals>
+                <goal>jar-no-fork</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>3.0.1</version>
+
+          <executions>
+            <execution>
+              <id>attach-javadocs</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId>
+          <version>1.6</version>
+
+          <executions>
+            <execution>
+              <id>sign-artifacts</id>
+              <phase>verify</phase>
+              <goals>
+                <goal>sign</goal>
+              </goals>
+              <configuration>
+                <executable>/usr/local/bin/gpg2</executable>
+                <defaultKeyring>/Users/charlesr/.gnupg/pubring.kbx</defaultKeyring>
+                <keyname>C63AF171ED3F7C9E</keyname>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+      </plugins>
+    </build>
+
+    <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <maven.compiler.source>1.7</maven.compiler.source>
+      <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+</project>

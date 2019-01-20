@@ -1,0 +1,6 @@
+# Ignore generated jar files ...
+target/
+nbactions.xml
+pom.xml.versionsBackup
+
+.DS_STORE

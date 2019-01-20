@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>net.sf.smc</groupId>
+        <artifactId>smc</artifactId>
+        <version>7.0.0</version>
+    </parent>
+
+    <artifactId>example-java-ex6</artifactId>
+    <packaging>jar</packaging>
+    <name>SMC example - Java 6</name>
+
+    <build>
+      <plugins>
+
+        <plugin>
+          <groupId>net.sf.smc</groupId>
+          <artifactId>smc-maven-plugin</artifactId>
+          <version>7.0.0</version>
+
+          <executions>
+            <execution>
+              <id>fsm-src-build</id>
+              <phase>generate-sources</phase>
+              <goals>
+                <goal>smc</goal>
+              </goals>
+              <configuration>
+                <targetLanguage>java</targetLanguage>
+                <verbose>true</verbose>
+              </configuration>
+            </execution>
+          </executions>
+        </plugin>
+
+      </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>smc-maven-plugin</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+    <properties>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+
+</project>

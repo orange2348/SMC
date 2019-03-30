@@ -117,7 +117,7 @@ public final class Smc
     //
 
     public static final String APP_NAME = "smc";
-    public static final String VERSION = "v. 6.6.3";
+    public static final String VERSION = "v. 7.0.2";
 
     /**
      * SMC target files must end with {@value}.
@@ -967,20 +967,7 @@ public final class Smc
     {
         for (SmcMessage message: messages)
         {
-            stream.print(srcFileName);
-            stream.print(':');
-            stream.print(message.getLineNumber());
-
-            if (message.getLevel() == SmcMessage.WARNING)
-            {
-                stream.print(": warning - ");
-            }
-            else
-            {
-                stream.print(": error - ");
-            }
-
-            stream.println(message.getText());
+            stream.println(message);
         }
 
         return;

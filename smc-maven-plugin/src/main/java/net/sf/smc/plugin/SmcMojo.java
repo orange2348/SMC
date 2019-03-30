@@ -403,7 +403,7 @@ public final class SmcMojo
      * Available for java, java7 only.
      * </p>
      */
-    @Parameter(property = "access", defaultValue = "public")
+    @Parameter(property = "access", defaultValue = "")
     private String access;
 
     /**
@@ -906,7 +906,7 @@ public final class SmcMojo
 
     /**
      * Access identifier for generated classes. Default setting
-     * is {@code public}.
+     * is an empty string.
      * <p>
      * Available for java, java7 only.
      * </p>
@@ -1141,12 +1141,6 @@ public final class SmcMojo
                     new MojoExecutionException(
                         "failed to create " + path));
             }
-            // DEBUG
-            else
-            {
-                System.out.format(
-                    "Created directory %s.%n", path);
-            }
 
             if (!path.exists())
             {
@@ -1166,7 +1160,7 @@ public final class SmcMojo
             {
                 throw (
                     new MojoExecutionException(
-                        "\"" + path + "\" is not readble"));
+                        "\"" + path + "\" is not readable"));
             }
 
             if (writable && !path.canWrite())
@@ -1516,6 +1510,18 @@ public final class SmcMojo
                     (delta.getNano() / NANOS_PER_MILLI)));
         }
 
+        // Did the parse fail?
+        if (retval == null)
+        {
+            // Yes. Output the messages and throw a MOJO failure.
+            for (SmcMessage message : parser.getMessages())
+            {
+                System.err.println(message);
+            }
+
+            throw (new MojoFailureException("SMC parse failed"));
+        }
+
         return (retval);
     } // end of parse(String, String)
 
@@ -1691,7 +1697,11 @@ public final class SmcMojo
 
         // If the access level is "package", then change this to
         // "/* package */".
-        if (access.equalsIgnoreCase(Smc.PACKAGE_LEVEL))
+        if (access == null || access.isEmpty())
+        {
+            access = "public";
+        }
+        else if (access.equalsIgnoreCase(Smc.PACKAGE_LEVEL))
         {
             access = Smc.PACKAGE_ACCESS;
         }

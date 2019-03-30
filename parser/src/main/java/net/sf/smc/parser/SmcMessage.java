@@ -77,6 +77,10 @@ public final class SmcMessage
 // Member methods
 //
 
+    //-----------------------------------------------------------
+    // Constructors.
+    //
+
     /**
      * Creates a message for the given FSM, line number, level
      * and text.
@@ -150,6 +154,40 @@ public final class SmcMessage
         }
     }
 
+    //
+    // end of Constructors.
+    //-----------------------------------------------------------
+
+    //-----------------------------------------------------------
+    // Object Method Overrides.
+    //
+
+    @Override
+    public String toString()
+    {
+        StringBuilder retval = new StringBuilder();
+
+        retval.append(mName)
+              .append(':')
+              .append(mLineNumber)
+              .append(':')
+              .append(mLevel == WARNING ?
+                      " warning" :
+                      " error")
+              .append(" - ")
+              .append(mText);
+
+        return (retval.toString());
+    } // end of toString()
+
+    //
+    // end of Object Method Overrides.
+    //-----------------------------------------------------------
+
+    //-----------------------------------------------------------
+    // Get Methods.
+    //
+
     /**
      * Returns the finite state machine's name.
      * @return the finite state machine's name.
@@ -186,7 +224,11 @@ public final class SmcMessage
     {
         return (mText);
     }
-}
+
+    //
+    // end of Get Methods.
+    //-----------------------------------------------------------
+} // end of class SmcMessage
 
 // CHANGE LOG
 // $Log: SmcMessage.java,v $

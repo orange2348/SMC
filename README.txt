@@ -2,7 +2,7 @@
 
                                SMC
                      The State Machine Compiler
-                         (Version: 7.0.2)
+                         (Version: 7.1.0)
 
                      http://smc.sourceforge.net
 
@@ -30,6 +30,10 @@ Bug Fixes:
 (All)
     SMC plug-in does report errors found in .sm file.
     (SF bug 221)
+
+(Objective-C)
+    All states in generated code for ObjC have stateId == 0
+    (SF bug 223)
 
 
 1. System Requirements

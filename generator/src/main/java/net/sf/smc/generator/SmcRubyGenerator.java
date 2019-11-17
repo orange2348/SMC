@@ -13,7 +13,7 @@
 //
 // The Initial Developer of the Original Code is Charles W. Rapp.
 // Portions created by Charles W. Rapp are
-// Copyright (C) 2005, 2008 - 2009. Charles W. Rapp.
+// Copyright (C) 2005, 2008 - 2009, 2019. Charles W. Rapp.
 // All Rights Reserved.
 //
 // Port to Python by Francois Perrad, francois.perrad@gadz.org
@@ -681,9 +681,9 @@ public final class SmcRubyGenerator
         List<SmcParameter> parameters =
             transition.getParameters();
         List<SmcGuard> guards = transition.getGuards();
-        boolean nullCondition = false;
-        Iterator<SmcGuard> git;
+        Iterator<SmcGuard> git = guards.iterator();
         SmcGuard guard;
+        SmcGuard nullGuard = null;
         String indent2;
 
         mTarget.println();
@@ -730,29 +730,52 @@ public final class SmcRubyGenerator
         // Loop through the guards and print each one.
         indent2 = mIndent;
         mIndent += "    ";
-        for (git = guards.iterator(),
-                  mGuardIndex = 0,
-                  mGuardCount = guards.size();
-             git.hasNext();
-             ++mGuardIndex)
+        mGuardIndex = 0;
+        mGuardCount = guards.size();
+        while (git.hasNext())
         {
             guard = git.next();
 
             // Count up the guards with no condition.
-            if (guard.getCondition().length() == 0)
+            if (guard.getCondition().isEmpty())
             {
-                nullCondition = true;
+                nullGuard = guard;
             }
-
-            guard.accept(this);
+            else
+            {
+                guard.accept(this);
+                ++mGuardIndex;
+            }
         }
         mIndent = indent2;
 
+        // Is there an explicitly defined unguarded transition?
+        if (nullGuard != null)
+        {
+            // Does this guard have any actions or is this guard
+            // *not* an internal loopback transition?
+            if (nullGuard.hasActions() ||
+                !(nullGuard.getEndState()).equals(SmcElement.NIL_STATE) ||
+                nullGuard.getTransType() == TransType.TRANS_PUSH ||
+                nullGuard.getTransType() == TransType.TRANS_POP)
+            {
+                // Need to output either the action and/or the
+                // next state, so output the guard.
+                indent2 = mIndent;
+                mIndent += "    ";
+
+                nullGuard.accept(this);
+
+                mIndent = indent2;
+            }
+
+            mTarget.println();
+        }
         // If all guards have a condition, then create a final
         // "else" clause which passes control to the default
         // transition. Pass all arguments into the default
         // transition.
-        if (mGuardIndex > 0 && nullCondition == false)
+        else if (mGuardIndex > 0)
         {
             mTarget.print(mIndent);
             mTarget.println("    else");

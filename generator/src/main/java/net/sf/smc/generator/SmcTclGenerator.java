@@ -13,7 +13,7 @@
 //
 // The Initial Developer of the Original Code is Charles W. Rapp.
 // Portions created by Charles W. Rapp are
-// Copyright (C) 2005 - 2009. Charles W. Rapp.
+// Copyright (C) 2005 - 2009, 2019. Charles W. Rapp.
 // All Rights Reserved.
 //
 // Contributor(s):
@@ -839,9 +839,9 @@ public final class SmcTclGenerator
         List<SmcParameter> parameters =
             transition.getParameters();
         List<SmcGuard> guards = transition.getGuards();
-        boolean nullCondition = false;
-        Iterator<SmcGuard> git;
+        Iterator<SmcGuard> git = guards.iterator();
         SmcGuard guard;
+        SmcGuard nullGuard = null;
 
         mTarget.println();
         mTarget.print(mIndent);
@@ -903,29 +903,47 @@ public final class SmcTclGenerator
             mTarget.println();
         }
 
-        for (git = guards.iterator(),
-                 mGuardIndex = 0,
-                 mGuardCount = guards.size();
-             git.hasNext();
-             ++mGuardIndex)
+        mGuardIndex = 0;
+        mGuardCount = guards.size();
+        while (git.hasNext())
         {
             guard = git.next();
 
             // Track if there is a guard with no condition.
-            if (guard.getCondition().length() == 0)
+            if (guard.getCondition().isEmpty())
             {
-                nullCondition = true;
+                nullGuard = guard;
             }
-
-            guard.accept(this);
+            else
+            {
+                guard.accept(this);
+                ++mGuardIndex;
+            }
         }
 
+        // Is there an explicitly defined unguarded transition?
+        if (nullGuard != null)
+        {
+            // Does this guard have any actions or is this guard
+            // *not* an internal loopback transition?
+            if (nullGuard.hasActions() ||
+                !(nullGuard.getEndState()).equals(SmcElement.NIL_STATE) ||
+                nullGuard.getTransType() == TransType.TRANS_PUSH ||
+                nullGuard.getTransType() == TransType.TRANS_POP)
+            {
+                // Need to output either the action and/or the
+                // next state, so output the guard.
+                nullGuard.accept(this);
+            }
+
+            mTarget.println();
+        }
         // What if all the guards have a condition? There will be
         // no "else" clause. This condition will fall through and
         // do nothing? Is that right? No. If that is the case,
         // then add the "else" clause and have it call this
         // transition's default.
-        if (mGuardIndex > 0 && nullCondition == false)
+        else if (mGuardIndex > 0)
         {
             if (mGuardCount == 1)
             {

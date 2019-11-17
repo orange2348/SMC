@@ -13,7 +13,7 @@
 //
 // The Initial Developer of the Original Code is Charles W. Rapp.
 // Portions created by Charles W. Rapp are
-// Copyright (C) 2005 - 2009. Charles W. Rapp.
+// Copyright (C) 2005 - 2009, 2019. Charles W. Rapp.
 // All Rights Reserved.
 //
 // Contributor(s):
@@ -91,13 +91,12 @@ public final class SmcJava7Generator
         new ArrayList<>();
 
     /**
-     * Loop back transitions use a "nil" end state.
+     * Loop back transitions use a {@value} end state.
      */
     private static final String NIL_STATE = "nil";
 
     /**
-     * The constant integer state identifier suffix is
-     * "_STATE_ID".
+     * The constant integer state identifier suffix is {@value}.
      */
     private static final String STATE_ID_SUFFIX = "_STATE_ID";
 
@@ -107,6 +106,7 @@ public final class SmcJava7Generator
      */
     private static final String TRANSITION_ID_SUFFIX =
         "_TRANSITION_ID";
+
     /**
      * The state entry method name is:
      * "&lt;map&gt;_&lt;state&gt;__Entry_".
@@ -311,7 +311,6 @@ public final class SmcJava7Generator
         final String mapName = map.getName();
         final String stateName = state.getClassName();
         final String transName = transition.getName();
-        final String context = (map.getFSM()).getContext();
         String sep = "";
 
         // 1. Output transtion method declaration and opening
@@ -461,7 +460,7 @@ public final class SmcJava7Generator
             (hasActions || loopbackFlag == false))
         {
             mTarget.print(mIndent);
-            mTarget.print("    setState(_States[");
+            mTarget.print("    setState(sStates[");
             mTarget.print(endStateId);
             mTarget.println("]);");
         }
@@ -473,7 +472,7 @@ public final class SmcJava7Generator
             if (loopbackFlag == false || hasActions)
             {
                 mTarget.print(mIndent);
-                mTarget.print("    setState(_States[");
+                mTarget.print("    setState(sStates[");
                 mTarget.print(endStateId);
                 mTarget.println("]);");
             }
@@ -487,7 +486,7 @@ public final class SmcJava7Generator
             }
 
             mTarget.print(mIndent);
-            mTarget.print("    pushState(_States[");
+            mTarget.print("    pushState(sStates[");
             mTarget.print(pushStateId);
             mTarget.println("]);");
         }
@@ -823,7 +822,7 @@ public final class SmcJava7Generator
         mTarget.print(context);
         mTarget.println(" owner)");
         mTarget.println("    {");
-        mTarget.print("        this (owner, _States[");
+        mTarget.print("        this (owner, sStates[");
         mTarget.print(javaState);
         mTarget.println("]);");
         mTarget.println("    }");
@@ -840,7 +839,7 @@ public final class SmcJava7Generator
         mTarget.print(context);
         mTarget.println(" owner, final int initStateId)");
         mTarget.println("    {");
-        mTarget.print("        this (owner, _States[initStateId]);");
+        mTarget.print("        this (owner, sStates[initStateId]);");
         mTarget.println("    }");
         mTarget.println();
 
@@ -907,14 +906,14 @@ public final class SmcJava7Generator
                 "        throws ArrayIndexOutOfBoundsException");
             mTarget.println("    {");
             mTarget.println(
-                "        return (_States[stateId]);");
+                "        return (sStates[stateId]);");
             mTarget.println("    }");
             mTarget.println();
 
             // getStates() method.
             mTarget.println("    public static State7[] getStates()");
             mTarget.println("    {");
-            mTarget.println("        return (_States);");
+            mTarget.println("        return (sStates);");
             mTarget.println("    }");
             mTarget.println();
 
@@ -1000,9 +999,9 @@ public final class SmcJava7Generator
         mTarget.println("        }");
         mTarget.println("        catch (Throwable tex)");
         mTarget.println("        {");
-        mTarget.println("            if (_debugFlag)");
+        mTarget.println("            if (mDebugFlag)");
         mTarget.println("            {");
-        mTarget.println("                tex.printStackTrace(_debugStream);");
+        mTarget.println("                tex.printStackTrace(mDebugStream);");
         mTarget.println("            }");
         mTarget.println("        }");
         mTarget.println();
@@ -1071,7 +1070,7 @@ public final class SmcJava7Generator
 
                 // Save away the transition name in case it is
                 // need in an UndefinedTransitionException.
-                mTarget.print("        _transition = \"");
+                mTarget.print("        mTransition = \"");
                 mTarget.print(transName);
                 mTarget.println("\";");
 
@@ -1130,16 +1129,16 @@ public final class SmcJava7Generator
                 mTarget.println("        catch (Throwable tex)");
                 mTarget.println("        {");
                 mTarget.println(
-                    "            if (_debugFlag)");
+                    "            if (mDebugFlag)");
                 mTarget.println("            {");
                 mTarget.println(
-                    "                tex.printStackTrace(_debugStream);");
+                    "                tex.printStackTrace(mDebugStream);");
                 mTarget.println("            }");
                 mTarget.println("        }");
 
                 // Clear the in-progress transition name before
                 // returning.
-                mTarget.println("        _transition = \"\";");
+                mTarget.println("        mTransition = \"\";");
 
                 mTarget.println("        return;");
                 mTarget.println("    }");
@@ -1175,7 +1174,7 @@ public final class SmcJava7Generator
         mTarget.println(
             "        final int size =");
         mTarget.println(
-            "            (_stateStack == null ? 0 : _stateStack.size());");
+            "            (mStateStack == null ? 0 : mStateStack.size());");
         mTarget.println("        int i;");
         mTarget.println();
         mTarget.println(
@@ -1186,7 +1185,7 @@ public final class SmcJava7Generator
         mTarget.println(
             "            final Iterator<State7> sit =");
         mTarget.println(
-            "                _stateStack.iterator();");
+            "                mStateStack.iterator();");
         mTarget.println();
         mTarget.println(
             "            while (sit.hasNext())");
@@ -1197,7 +1196,7 @@ public final class SmcJava7Generator
         mTarget.println("        }");
         mTarget.println();
         mTarget.println(
-            "        ostream.writeInt(_state.getId());");
+            "        ostream.writeInt(mState.getId());");
         mTarget.println();
         mTarget.println("        return;");
         mTarget.println("    }");
@@ -1211,24 +1210,24 @@ public final class SmcJava7Generator
         mTarget.println();
         mTarget.println("        if (size == 0)");
         mTarget.println("        {");
-        mTarget.println("            _stateStack = null;");
+        mTarget.println("            mStateStack = null;");
         mTarget.println("        }");
         mTarget.println("        else");
         mTarget.println("        {");
         mTarget.println("            int i;");
         mTarget.println();
-        mTarget.println("            _stateStack = new ArrayDeque<>();");
+        mTarget.println("            mStateStack = new ArrayDeque<>();");
         mTarget.println();
         mTarget.println(
             "            for (i = 0; i < size; ++i)");
         mTarget.println("            {");
         mTarget.println(
-            "                _stateStack.addLast(_States[istream.readInt()]);");
+            "                mStateStack.addLast(sStates[istream.readInt()]);");
         mTarget.println("            }");
         mTarget.println("        }");
         mTarget.println();
         mTarget.println(
-            "        _state = _States[istream.readInt()];");
+            "        mState = sStates[istream.readInt()];");
         mTarget.println();
         mTarget.println("        return;");
         mTarget.println("    }");
@@ -1285,9 +1284,9 @@ public final class SmcJava7Generator
         outputNames(fsm);
 
         // 5.2.5. Output the states array.
-        //        Note: the array is filled in in the class init.
+        //        Note: the array is filled in the class init.
         mTarget.println(
-            "    private static final State7[] _States = new State7[STATE_COUNT];");
+            "    private static final State7[] sStates = new State7[STATE_COUNT];");
         mTarget.println();
 
         // 5.2.6. Output the class static initialization block.
@@ -1357,19 +1356,17 @@ public final class SmcJava7Generator
      */
     private void outputTransitionIds(final SmcFSM fsm)
     {
-        final List<SmcTransition> transitions =
-            fsm.getTransitions();
         String transName;
         String transIdName;
         int transId = 1;
 
-        for (SmcTransition trans : transitions)
+        for (SmcTransition trans : fsm.getTransitions())
         {
             transName = trans.getName();
 
             // The default transition ID is already set to zero
             // in FSMContext7.
-            if (transName.equals(DEFAULT_NAME) == false)
+            if (!transName.equals(DEFAULT_NAME))
             {
                 transIdName =
                     String.format(
@@ -1399,10 +1396,13 @@ public final class SmcJava7Generator
         return;
     } // end of outputTransitionIds(SmcFSM)
 
+    /**
+     * Outputs an array containing each transition's method
+     * signature.
+     * @param fsm FSM model.
+     */
     private void outputTransitionSignatures(final SmcFSM fsm)
     {
-        final List<SmcTransition> transitions =
-            fsm.getTransitions();
         String transName;
         List<SmcParameter> params;
 
@@ -1411,15 +1411,15 @@ public final class SmcJava7Generator
         mTarget.println("    {");
 
         // The first transition (index 0) is the Default
-        // transition - which returns void and has no
-        // parameters.
+        // transition - which returns void and has no parameters.
         mTarget.print("        NO_ARGS_TYPE");
 
-        for (SmcTransition trans : transitions)
+        for (SmcTransition trans : fsm.getTransitions())
         {
             transName = trans.getName();
 
-            if (transName.equals(DEFAULT_NAME) == false)
+            // Skip the default state.
+            if (!transName.equals(DEFAULT_NAME))
             {
                 // Output the separator between the previous
                 // signature and this one.
@@ -1511,7 +1511,7 @@ public final class SmcJava7Generator
     } // end of outputMapNames(SmcFSM)
 
     /**
-     * Writes a two-dimesional array containing the state names
+     * Writes a two-dimensional array containing the state names
      * for each map.
      * @param fsm the FSM model.
      */
@@ -1576,8 +1576,7 @@ public final class SmcJava7Generator
                 mTarget.println("        new String[]");
                 mTarget.print("        {");
 
-                for (SmcTransition trans :
-                         state.getTransitions())
+                for (SmcTransition trans : state.getTransitions())
                 {
                     mTarget.println(sep1);
                     mTarget.print("            \"");
@@ -1624,7 +1623,10 @@ public final class SmcJava7Generator
         for (SmcTransition trans : fsm.getTransitions())
         {
             transName = trans.getName();
-            if (transName.equals(DEFAULT_NAME) == false)
+
+            // Skip the default transition since it is already
+            // output.
+            if (!DEFAULT_NAME.equals(transName))
             {
                 mTarget.println(sep);
                 mTarget.print("        \"");
@@ -1735,7 +1737,7 @@ public final class SmcJava7Generator
         outputClassInitTransitions();
 
         // 5.2.6.3.3. Output the state instantiation.
-        mTarget.println("                _States[stateId] =");
+        mTarget.println("                sStates[stateId] =");
         mTarget.println("                    new State7(");
         mTarget.println(
             "                        String.format(STATE_NAME_FORMAT, mapName, stateName),");
@@ -1745,7 +1747,6 @@ public final class SmcJava7Generator
         mTarget.println("                        transitions,");
         mTarget.println("                        STATE_TRANSITIONS[stateId]);");
 
-        mTarget.println();
         mTarget.println("            }");
 
         return;
@@ -1816,7 +1817,7 @@ public final class SmcJava7Generator
 
             mTarget.print("        public static final State7 ");
             mTarget.print(stateName);
-            mTarget.print(" = _States[");
+            mTarget.print(" = sStates[");
             mTarget.format("%s_%s%s",
                            mapName,
                            stateName,
@@ -1893,8 +1894,9 @@ public final class SmcJava7Generator
         final List<SmcGuard> guards = transition.getGuards();
         final Iterator<SmcGuard> git = guards.iterator();
         SmcGuard guard;
-        boolean nullCondition = false;
+        SmcGuard nullGuard = null;
 
+        mGuardIndex = 0;
         mGuardCount = guards.size();
 
         // If there is either more than one guard or one guard
@@ -1913,35 +1915,52 @@ public final class SmcJava7Generator
         // 4.1. Output the "stateId" local variable in case it is
         //      needed.
         mTarget.println(
-            "        final int stateId = _state.getId();");
+            "        final int stateId = mState.getId();");
         mTarget.println();
 
         // 4.2. Output each guard, tracking if there are any with
         //      no condition.
-        for (mGuardIndex = 0;
-             git.hasNext();
-             ++mGuardIndex)
+        while (git.hasNext())
         {
             guard = git.next();
 
-            // Track if there is a "no condition" guard.
-            nullCondition = (guard.getCondition()).isEmpty();
-
-            guard.accept(this);
+            // Output the no condition guard *after* all other
+            // guarded transitions.
+            if ((guard.getCondition()).isEmpty())
+            {
+                nullGuard = guard;
+            }
+            else
+            {
+                guard.accept(this);
+                ++mGuardIndex;
+            }
         }
 
+        // Is there an explicitly defined unguarded transition?
+        if (nullGuard != null)
+        {
+            // Does this guard have any actions or is this guard
+            // *not* an internal loopback transition?
+            if (nullGuard.hasActions() ||
+                !(nullGuard.getEndState()).equals(SmcElement.NIL_STATE) ||
+                nullGuard.getTransType() == TransType.TRANS_PUSH ||
+                nullGuard.getTransType() == TransType.TRANS_POP)
+            {
+                // Need to output either the action and/or the
+                // next state, so output the guard.
+                nullGuard.accept(this);
+            }
+
+            mTarget.println();
+        }
         // If all guards have a condition, then create a final
         // "else" clause which passes control to the default
         // state implementation of this transition. Pass all
         // arguments into the default transition.
-        if (mGuardIndex > 0 && nullCondition == false)
+        else if (mGuardIndex > 0)
         {
             outputElseGuard(transition, mapName);
-        }
-        // Need to add a final newline after a multiguard block.
-        else if (mGuardCount > 1)
-        {
-            mTarget.println();
         }
 
         return;
@@ -2116,12 +2135,12 @@ public final class SmcJava7Generator
         if (mDebugLevel >= DEBUG_LEVEL_0)
         {
             mTarget.print(mIndent);
-            mTarget.println("if (_debugFlag)");
+            mTarget.println("if (mDebugFlag)");
             mTarget.print(mIndent);
             mTarget.println("{");
             mTarget.print(mIndent);
             mTarget.print(
-                "    _debugStream.println(\"LEAVING STATE   : ");
+                "    mDebugStream.println(\"LEAVING STATE   : ");
             mTarget.print(mapName);
             mTarget.print('.');
             mTarget.print(stateName);
@@ -2136,12 +2155,12 @@ public final class SmcJava7Generator
             String sep;
 
             mTarget.print(mIndent);
-            mTarget.println("if (_debugFlag)");
+            mTarget.println("if (mDebugFlag)");
             mTarget.print(mIndent);
             mTarget.println("{");
             mTarget.print(mIndent);
             mTarget.print(
-                "    _debugStream.println(\"BEFORE EXIT     : ");
+                "    mDebugStream.println(\"BEFORE EXIT     : ");
             mTarget.print(stateName);
             mTarget.println(".exit()\");");
             mTarget.print(mIndent);
@@ -2156,12 +2175,12 @@ public final class SmcJava7Generator
         if (mDebugLevel >= DEBUG_LEVEL_1)
         {
             mTarget.print(mIndent);
-            mTarget.println("if (_debugFlag)");
+            mTarget.println("if (mDebugFlag)");
             mTarget.print(mIndent);
             mTarget.println("{");
             mTarget.print(mIndent);
             mTarget.print(
-                "    _debugStream.println(\"AFTER EXIT      : ");
+                "    mDebugStream.println(\"AFTER EXIT      : ");
             mTarget.print(stateName);
             mTarget.println(".exit()\");");
             mTarget.print(mIndent);
@@ -2219,12 +2238,12 @@ public final class SmcJava7Generator
 
             mTarget.print(mIndent);
             mTarget.println(
-                "    if (_debugFlag)");
+                "    if (mDebugFlag)");
             mTarget.print(mIndent);
             mTarget.println("    {");
             mTarget.print(mIndent);
             mTarget.print(
-                "        _debugStream.println(\"ENTER TRANSITION: ");
+                "        mDebugStream.println(\"ENTER TRANSITION: ");
             mTarget.print(mapName);
             mTarget.print('.');
             mTarget.print(stateName);
@@ -2306,12 +2325,12 @@ public final class SmcJava7Generator
             mTarget.println();
             mTarget.print(mIndent);
             mTarget.println(
-                "    if (_debugFlag)");
+                "    if (mDebugFlag)");
             mTarget.print(mIndent);
             mTarget.println("    {");
             mTarget.print(mIndent);
             mTarget.print(
-                "        _debugStream.println(\"EXIT TRANSITION : ");
+                "        mDebugStream.println(\"EXIT TRANSITION : ");
             mTarget.print(mapName);
             mTarget.print('.');
             mTarget.print(stateName);
@@ -2349,11 +2368,11 @@ public final class SmcJava7Generator
         {
             mTarget.println();
             mTarget.print(mIndent);
-            mTarget.println("if (_debugFlag)");
+            mTarget.println("if (mDebugFlag)");
             mTarget.print(mIndent);
             mTarget.println("{");
             mTarget.print(mIndent);
-            mTarget.print("    _debugStream.println(\"BEFORE ENTRY    : ");
+            mTarget.print("    mDebugStream.println(\"BEFORE ENTRY    : ");
             mTarget.print(stateName);
             mTarget.println(".entry()\");");
             mTarget.print(mIndent);
@@ -2369,12 +2388,12 @@ public final class SmcJava7Generator
             mTarget.println();
             mTarget.print(mIndent);
             mTarget.println(
-                "if (_debugFlag)");
+                "if (mDebugFlag)");
             mTarget.print(mIndent);
             mTarget.println("{");
             mTarget.print(mIndent);
             mTarget.print(
-                "    _debugStream.println(\"AFTER ENTRY     : ");
+                "    mDebugStream.println(\"AFTER ENTRY     : ");
             mTarget.print(stateName);
             mTarget.println(".entry()\");");
             mTarget.print(mIndent);

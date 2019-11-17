@@ -13,7 +13,7 @@
 //
 // The Initial Developer of the Original Code is Charles W. Rapp.
 // Portions created by Charles W. Rapp are
-// Copyright (C) 2000 - 2008. Charles W. Rapp.
+// Copyright (C) 2000 - 2008, 2019. Charles W. Rapp.
 // All Rights Reserved.
 //
 // Contributor(s):
@@ -240,6 +240,16 @@ public final class SmcGuard
     {
         return (mTransition);
     } // end getTransition()
+
+    /**
+     * Returns {@code true} if the guard condition is a
+     * non-{@code null}, non-empty string.
+     * @return {@code true} if this guard has a condition.
+     */
+    public boolean hasCondition()
+    {
+        return (mCondition != null && !mCondition.isEmpty());
+    } // end of hasCondition()
 
     /**
      * Returns the guard condition.

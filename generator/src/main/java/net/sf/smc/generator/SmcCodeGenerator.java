@@ -471,7 +471,7 @@ public abstract class SmcCodeGenerator
      * Sets the target code output destination.
      * @param target the generated target code output stream.
      */
-    public void setTarget(PrintStream target)
+    public void setTarget(final PrintStream target)
     {
         mTarget = target;
         return;

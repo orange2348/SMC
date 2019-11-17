@@ -13,7 +13,7 @@
 //
 // The Initial Developer of the Original Code is Charles W. Rapp.
 // Portions created by Charles W. Rapp are
-// Copyright (C) 2006 - 2009. Charles W. Rapp.
+// Copyright (C) 2006 - 2009, 2019. Charles W. Rapp.
 // All Rights Reserved.
 //
 // Contributor(s):
@@ -121,7 +121,6 @@ public final class SmcObjCGenerator
         Iterator<SmcState> stateIt;
         SmcState state;
         Iterator<SmcParameter> pit;
-        int index;
 
         mTarget.println("/*");
         mTarget.println(" * ex: set ro:");
@@ -156,9 +155,7 @@ public final class SmcObjCGenerator
         mTarget.print(mIndent);
         mTarget.println("// Class declarations.");
 
-        for (mapIt = fsm.getMaps().iterator(), index = 0;
-             mapIt.hasNext();
-            )
+        for (mapIt = fsm.getMaps().iterator(); mapIt.hasNext();)
         {
             map = mapIt.next();
             mapName = map.getName();
@@ -229,7 +226,7 @@ public final class SmcObjCGenerator
                 mTarget.print("::");
                 mTarget.print(state.getClassName());
                 mTarget.print("\" stateId:");
-                mTarget.print(index);
+                mTarget.print(SmcMap.getNextStateId());
                 mTarget.println("];");
 
                 mTarget.print(mIndent);
@@ -256,8 +253,7 @@ public final class SmcObjCGenerator
 
 			// cleanup content
             for (stateIt = map.getStates().iterator();
-                 stateIt.hasNext();
-                 ++index)
+                 stateIt.hasNext();)
             {
                 state = stateIt.next();
 
@@ -493,9 +489,7 @@ public final class SmcObjCGenerator
 		mTarget.print(mIndent);
 		mTarget.println("{");
 
-        for (mapIt = fsm.getMaps().iterator(), index = 0;
-             mapIt.hasNext();
-			 )
+        for (mapIt = fsm.getMaps().iterator(); mapIt.hasNext();)
         {
             map = mapIt.next();
             mapName = map.getName();
@@ -784,10 +778,10 @@ public final class SmcObjCGenerator
         String mapName = map.getName();
         String stateName = state.getClassName();
         String transName = transition.getName();
-        boolean nullCondition = false;
         List<SmcGuard> guards = transition.getGuards();
-        Iterator<SmcGuard> git;
+        Iterator<SmcGuard> git = guards.iterator();
         SmcGuard guard;
+        SmcGuard nullGuard = null;
 
         mTarget.println();
         mTarget.print(mIndent);
@@ -840,32 +834,52 @@ public final class SmcObjCGenerator
 
 
         // Loop through the guards and print each one.
-        for (git = guards.iterator(),
-                     mGuardIndex = 0,
-                     mGuardCount = guards.size();
-             git.hasNext();
-             ++mGuardIndex)
+        mGuardIndex = 0;
+        mGuardCount = guards.size();
+        while (git.hasNext())
         {
             guard = git.next();
 
-            // Count up the number of guards with no condition.
-            if (guard.getCondition().length() == 0)
+            // Output the no condition guard *after* all other
+            // guarded transitions.
+            if ((guard.getCondition()).isEmpty())
             {
-                nullCondition = true;
+                nullGuard = guard;
             }
-
-            guard.accept(this);
+            else
+            {
+                guard.accept(this);
+                ++mGuardIndex;
+            }
         }
 
+        // Is there an unguarded transition?
+        if (nullGuard != null)
+        {
+            // Does this guard have any actions or is this guard
+            // *not* an internal loopback transition?
+            if (nullGuard.hasActions() ||
+                !(nullGuard.getEndState()).equals(SmcElement.NIL_STATE) ||
+                nullGuard.getTransType() == TransType.TRANS_PUSH ||
+                nullGuard.getTransType() == TransType.TRANS_POP)
+            {
+                // Need to output either the action and/or the
+                // next state, so output the guard.
+                nullGuard.accept(this);
+            }
+
+            mTarget.println();
+        }
         // If all guards have a condition, then create a final
         // "else" clause which passes control to the default
         // transition.
-        if (mGuardIndex > 0 && nullCondition == false)
+        else if (mGuardIndex > 0)
         {
             // If there is only one transition definition, then
             // close off the guard.
             if (mGuardCount == 1)
             {
+                mTarget.println();
                 mTarget.print(mIndent);
                 mTarget.println("    }");
             }
@@ -892,10 +906,6 @@ public final class SmcObjCGenerator
             mTarget.println("];");
             mTarget.print(mIndent);
             mTarget.println("    }");
-        }
-        else if (mGuardCount > 1)
-        {
-            mTarget.println();
         }
 
         mTarget.print(mIndent);

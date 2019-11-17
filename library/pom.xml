@@ -4,7 +4,7 @@
     <parent>
         <groupId>net.sf.smc</groupId>
         <artifactId>smc</artifactId>
-        <version>${smc.version}</version>
+        <version>7.1.0</version>
     </parent>
 
     <artifactId>library</artifactId>

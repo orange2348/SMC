@@ -117,7 +117,7 @@ public final class Smc
     //
 
     public static final String APP_NAME = "smc";
-    public static final String VERSION = "v. 7.0.2";
+    public static final String VERSION = "v. 7.1.0";
 
     /**
      * SMC target files must end with {@value}.

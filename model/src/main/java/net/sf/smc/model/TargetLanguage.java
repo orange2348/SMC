@@ -133,7 +133,7 @@ public enum TargetLanguage
     /**
      * <a href="http://java.oracle.com">Java 7</a>
      * <p>
-     * This version generates a transiton table, not the
+     * This version generates a transition table, not the
      * State pattern.
      * </p>
      */

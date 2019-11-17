@@ -226,9 +226,9 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
 
@@ -245,7 +245,7 @@ public final class SmcParserContext
 
     public void ACCESS(SmcLexer.Token token)
     {
-        _transition = "ACCESS";
+        mTransition = "ACCESS";
         try
         {
             final TransitionHandle th =
@@ -262,18 +262,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void CLASS_NAME(SmcLexer.Token token)
     {
-        _transition = "CLASS_NAME";
+        mTransition = "CLASS_NAME";
         try
         {
             final TransitionHandle th =
@@ -290,18 +290,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void COLON(SmcLexer.Token token)
     {
-        _transition = "COLON";
+        mTransition = "COLON";
         try
         {
             final TransitionHandle th =
@@ -318,18 +318,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void COMMA(SmcLexer.Token token)
     {
-        _transition = "COMMA";
+        mTransition = "COMMA";
         try
         {
             final TransitionHandle th =
@@ -346,18 +346,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void DECLARE(SmcLexer.Token token)
     {
-        _transition = "DECLARE";
+        mTransition = "DECLARE";
         try
         {
             final TransitionHandle th =
@@ -374,18 +374,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void DOLLAR(SmcLexer.Token token)
     {
-        _transition = "DOLLAR";
+        mTransition = "DOLLAR";
         try
         {
             final TransitionHandle th =
@@ -402,18 +402,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void ENTRY(SmcLexer.Token token)
     {
-        _transition = "ENTRY";
+        mTransition = "ENTRY";
         try
         {
             final TransitionHandle th =
@@ -430,18 +430,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void EOD(SmcLexer.Token token)
     {
-        _transition = "EOD";
+        mTransition = "EOD";
         try
         {
             final TransitionHandle th =
@@ -458,18 +458,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void EQUAL(SmcLexer.Token token)
     {
-        _transition = "EQUAL";
+        mTransition = "EQUAL";
         try
         {
             final TransitionHandle th =
@@ -486,18 +486,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void EXIT(SmcLexer.Token token)
     {
-        _transition = "EXIT";
+        mTransition = "EXIT";
         try
         {
             final TransitionHandle th =
@@ -514,18 +514,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void FSM_CLASS_NAME(SmcLexer.Token token)
     {
-        _transition = "FSM_CLASS_NAME";
+        mTransition = "FSM_CLASS_NAME";
         try
         {
             final TransitionHandle th =
@@ -542,18 +542,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void FSM_FILE_NAME(SmcLexer.Token token)
     {
-        _transition = "FSM_FILE_NAME";
+        mTransition = "FSM_FILE_NAME";
         try
         {
             final TransitionHandle th =
@@ -570,18 +570,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void HEADER_FILE(SmcLexer.Token token)
     {
-        _transition = "HEADER_FILE";
+        mTransition = "HEADER_FILE";
         try
         {
             final TransitionHandle th =
@@ -598,18 +598,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void IMPORT(SmcLexer.Token token)
     {
-        _transition = "IMPORT";
+        mTransition = "IMPORT";
         try
         {
             final TransitionHandle th =
@@ -626,18 +626,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void INCLUDE_FILE(SmcLexer.Token token)
     {
-        _transition = "INCLUDE_FILE";
+        mTransition = "INCLUDE_FILE";
         try
         {
             final TransitionHandle th =
@@ -654,18 +654,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void JUMP(SmcLexer.Token token)
     {
-        _transition = "JUMP";
+        mTransition = "JUMP";
         try
         {
             final TransitionHandle th =
@@ -682,18 +682,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void LEFT_BRACE(SmcLexer.Token token)
     {
-        _transition = "LEFT_BRACE";
+        mTransition = "LEFT_BRACE";
         try
         {
             final TransitionHandle th =
@@ -710,18 +710,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void LEFT_BRACKET(SmcLexer.Token token)
     {
-        _transition = "LEFT_BRACKET";
+        mTransition = "LEFT_BRACKET";
         try
         {
             final TransitionHandle th =
@@ -738,18 +738,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void LEFT_PAREN(SmcLexer.Token token)
     {
-        _transition = "LEFT_PAREN";
+        mTransition = "LEFT_PAREN";
         try
         {
             final TransitionHandle th =
@@ -766,18 +766,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void MAP_NAME(SmcLexer.Token token)
     {
-        _transition = "MAP_NAME";
+        mTransition = "MAP_NAME";
         try
         {
             final TransitionHandle th =
@@ -794,18 +794,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void PACKAGE_NAME(SmcLexer.Token token)
     {
-        _transition = "PACKAGE_NAME";
+        mTransition = "PACKAGE_NAME";
         try
         {
             final TransitionHandle th =
@@ -822,18 +822,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void POP(SmcLexer.Token token)
     {
-        _transition = "POP";
+        mTransition = "POP";
         try
         {
             final TransitionHandle th =
@@ -850,18 +850,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void PUSH(SmcLexer.Token token)
     {
-        _transition = "PUSH";
+        mTransition = "PUSH";
         try
         {
             final TransitionHandle th =
@@ -878,18 +878,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void RIGHT_BRACE(SmcLexer.Token token)
     {
-        _transition = "RIGHT_BRACE";
+        mTransition = "RIGHT_BRACE";
         try
         {
             final TransitionHandle th =
@@ -906,18 +906,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void RIGHT_PAREN(SmcLexer.Token token)
     {
-        _transition = "RIGHT_PAREN";
+        mTransition = "RIGHT_PAREN";
         try
         {
             final TransitionHandle th =
@@ -934,18 +934,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void SEMICOLON(SmcLexer.Token token)
     {
-        _transition = "SEMICOLON";
+        mTransition = "SEMICOLON";
         try
         {
             final TransitionHandle th =
@@ -962,18 +962,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void SLASH(SmcLexer.Token token)
     {
-        _transition = "SLASH";
+        mTransition = "SLASH";
         try
         {
             final TransitionHandle th =
@@ -990,18 +990,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void SOURCE(SmcLexer.Token token)
     {
-        _transition = "SOURCE";
+        mTransition = "SOURCE";
         try
         {
             final TransitionHandle th =
@@ -1018,18 +1018,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void START_STATE(SmcLexer.Token token)
     {
-        _transition = "START_STATE";
+        mTransition = "START_STATE";
         try
         {
             final TransitionHandle th =
@@ -1046,18 +1046,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void WORD(SmcLexer.Token token)
     {
-        _transition = "WORD";
+        mTransition = "WORD";
         try
         {
             final TransitionHandle th =
@@ -1074,18 +1074,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void actionsDone(List<SmcAction> actions, int lineNumber)
     {
-        _transition = "actionsDone";
+        mTransition = "actionsDone";
         try
         {
             final TransitionHandle th =
@@ -1102,18 +1102,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void actionsError()
     {
-        _transition = "actionsError";
+        mTransition = "actionsError";
         try
         {
             final TransitionHandle th =
@@ -1123,18 +1123,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void argsDone(List<String> args)
     {
-        _transition = "argsDone";
+        mTransition = "argsDone";
         try
         {
             final TransitionHandle th =
@@ -1151,18 +1151,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void argsError()
     {
-        _transition = "argsError";
+        mTransition = "argsError";
         try
         {
             final TransitionHandle th =
@@ -1172,18 +1172,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void paramsDone(List<SmcParameter> params, int lineNumber)
     {
-        _transition = "paramsDone";
+        mTransition = "paramsDone";
         try
         {
             final TransitionHandle th =
@@ -1200,18 +1200,18 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void paramsError(List<SmcParameter> params, int lineNumber)
     {
-        _transition = "paramsError";
+        mTransition = "paramsError";
         try
         {
             final TransitionHandle th =
@@ -1228,12 +1228,12 @@ public final class SmcParserContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
@@ -1247,7 +1247,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_ACCESS(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1269,7 +1269,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_CLASS_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1291,7 +1291,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_DECLARE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1313,7 +1313,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1336,7 +1336,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_FSM_CLASS_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1358,7 +1358,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_FSM_FILE_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1380,7 +1380,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_HEADER_FILE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1402,7 +1402,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_IMPORT(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1424,7 +1424,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_INCLUDE_FILE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1446,7 +1446,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_MAP_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.isValidHeader())
         {
@@ -1488,7 +1488,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_PACKAGE_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1508,7 +1508,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -1528,7 +1528,7 @@ public final class SmcParserContext
 
     private void ParserMap_Start_START_STATE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1558,7 +1558,7 @@ public final class SmcParserContext
 
     private void ParserMap_Context_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1580,7 +1580,7 @@ public final class SmcParserContext
 
     private void ParserMap_Context_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1610,7 +1610,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartState_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1632,7 +1632,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartState_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.isValidStartState(token.getValue()))
         {
@@ -1699,7 +1699,7 @@ public final class SmcParserContext
 
     private void ParserMap_HeaderFile_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1721,7 +1721,7 @@ public final class SmcParserContext
 
     private void ParserMap_HeaderFile_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1769,7 +1769,7 @@ public final class SmcParserContext
 
     private void ParserMap_IncludeFile_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1791,7 +1791,7 @@ public final class SmcParserContext
 
     private void ParserMap_IncludeFile_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1821,7 +1821,7 @@ public final class SmcParserContext
 
     private void ParserMap_Package_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1843,7 +1843,7 @@ public final class SmcParserContext
 
     private void ParserMap_Package_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1873,7 +1873,7 @@ public final class SmcParserContext
 
     private void ParserMap_FsmClassName_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1895,7 +1895,7 @@ public final class SmcParserContext
 
     private void ParserMap_FsmClassName_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1925,7 +1925,7 @@ public final class SmcParserContext
 
     private void ParserMap_FsmFileName_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1947,7 +1947,7 @@ public final class SmcParserContext
 
     private void ParserMap_FsmFileName_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -1995,7 +1995,7 @@ public final class SmcParserContext
 
     private void ParserMap_Import_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2017,7 +2017,7 @@ public final class SmcParserContext
 
     private void ParserMap_Import_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2065,7 +2065,7 @@ public final class SmcParserContext
 
     private void ParserMap_Declare_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2087,7 +2087,7 @@ public final class SmcParserContext
 
     private void ParserMap_Declare_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2135,7 +2135,7 @@ public final class SmcParserContext
 
     private void ParserMap_Access_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2157,7 +2157,7 @@ public final class SmcParserContext
 
     private void ParserMap_Access_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2187,7 +2187,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartError_ACCESS(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2207,7 +2207,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartError_CLASS_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2229,7 +2229,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartError_DECLARE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2251,7 +2251,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -2267,7 +2267,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartError_FSM_CLASS_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2289,7 +2289,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartError_FSM_FILE_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2311,7 +2311,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartError_HEADER_FILE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2333,7 +2333,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartError_IMPORT(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2355,7 +2355,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartError_MAP_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.isValidHeader())
         {
@@ -2396,7 +2396,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartError_PACKAGE_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2416,7 +2416,7 @@ public final class SmcParserContext
 
     private void ParserMap_StartError_START_STATE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2446,7 +2446,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapStart_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2468,7 +2468,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapStart_MAP_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2496,7 +2496,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapStartError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -2512,7 +2512,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapStartError_MAP_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2540,7 +2540,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapName_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -2559,7 +2559,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapName_EOD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2582,7 +2582,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapName_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.isDuplicateMap(token.getValue()))
         {
@@ -2632,7 +2632,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapStates_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2654,7 +2654,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapStates_EOD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2674,7 +2674,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapStates_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2705,7 +2705,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapStatesError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -2721,7 +2721,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapStatesError_EOD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2741,7 +2741,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapStatesError_MAP_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2763,7 +2763,7 @@ public final class SmcParserContext
 
     private void ParserMap_MapStatesError_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2793,7 +2793,7 @@ public final class SmcParserContext
 
     private void ParserMap_States_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -2812,7 +2812,7 @@ public final class SmcParserContext
 
     private void ParserMap_States_ENTRY(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2835,7 +2835,7 @@ public final class SmcParserContext
 
     private void ParserMap_States_EOD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2857,7 +2857,7 @@ public final class SmcParserContext
 
     private void ParserMap_States_EQUAL(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2880,7 +2880,7 @@ public final class SmcParserContext
 
     private void ParserMap_States_EXIT(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2903,7 +2903,7 @@ public final class SmcParserContext
 
     private void ParserMap_States_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2926,7 +2926,7 @@ public final class SmcParserContext
 
     private void ParserMap_States_MAP_NAME(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -2949,7 +2949,7 @@ public final class SmcParserContext
 
     private void ParserMap_States_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.isDuplicateState(token.getValue()))
         {
@@ -2999,7 +2999,7 @@ public final class SmcParserContext
 
     private void ParserMap_StateStart_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3021,7 +3021,7 @@ public final class SmcParserContext
 
     private void ParserMap_StateStart_ENTRY(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.isDefaultState())
         {
@@ -3060,7 +3060,7 @@ public final class SmcParserContext
 
     private void ParserMap_StateStart_EXIT(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.isDefaultState())
         {
@@ -3099,7 +3099,7 @@ public final class SmcParserContext
 
     private void ParserMap_StateStart_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3127,7 +3127,7 @@ public final class SmcParserContext
 
     private void ParserMap_StateStartError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -3143,7 +3143,7 @@ public final class SmcParserContext
 
     private void ParserMap_StateStartError_ENTRY(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3163,7 +3163,7 @@ public final class SmcParserContext
 
     private void ParserMap_StateStartError_EXIT(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3183,7 +3183,7 @@ public final class SmcParserContext
 
     private void ParserMap_StateStartError_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3211,7 +3211,7 @@ public final class SmcParserContext
 
     private void ParserMap_EntryStart_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3233,7 +3233,7 @@ public final class SmcParserContext
 
     private void ParserMap_EntryStart_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -3263,7 +3263,7 @@ public final class SmcParserContext
 
     private void ParserMap_EntryEnd_actionsDone(List<SmcAction> actions, int lineNumber)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3285,7 +3285,7 @@ public final class SmcParserContext
 
     private void ParserMap_EntryEnd_actionsError()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3313,7 +3313,7 @@ public final class SmcParserContext
 
     private void ParserMap_ExitStart_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3335,7 +3335,7 @@ public final class SmcParserContext
 
     private void ParserMap_ExitStart_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -3365,7 +3365,7 @@ public final class SmcParserContext
 
     private void ParserMap_ExitEnd_actionsDone(List<SmcAction> actions, int lineNumber)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3387,7 +3387,7 @@ public final class SmcParserContext
 
     private void ParserMap_ExitEnd_actionsError()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3415,7 +3415,7 @@ public final class SmcParserContext
 
     private void ParserMap_Transitions_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3437,7 +3437,7 @@ public final class SmcParserContext
 
     private void ParserMap_Transitions_RIGHT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3459,7 +3459,7 @@ public final class SmcParserContext
 
     private void ParserMap_Transitions_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3489,7 +3489,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -3505,7 +3505,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransError_RIGHT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3527,7 +3527,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransError_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3557,7 +3557,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStart_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3580,7 +3580,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStart_JUMP(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3604,7 +3604,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStart_LEFT_BRACKET(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3626,7 +3626,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStart_LEFT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -3646,7 +3646,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStart_POP(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3670,7 +3670,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStart_PUSH(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3695,7 +3695,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStart_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3728,7 +3728,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStartError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -3744,7 +3744,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStartError_JUMP(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3768,7 +3768,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStartError_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -3793,7 +3793,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStartError_LEFT_BRACKET(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3813,7 +3813,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStartError_LEFT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -3833,7 +3833,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStartError_POP(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3856,7 +3856,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStartError_PUSH(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3880,7 +3880,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransStartError_RIGHT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3911,7 +3911,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransParams_paramsDone(List<SmcParameter> params, int lineNumber)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.getTransitionName().equalsIgnoreCase("Default") &&
        !params.isEmpty())
@@ -3954,7 +3954,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransParams_paramsError(List<SmcParameter> params, int lineNumber)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -3984,7 +3984,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNext_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4006,7 +4006,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNext_JUMP(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4030,7 +4030,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNext_LEFT_BRACKET(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4050,7 +4050,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNext_POP(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4073,7 +4073,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNext_PUSH(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4097,7 +4097,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNext_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4129,7 +4129,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNextError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -4145,7 +4145,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNextError_JUMP(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4169,7 +4169,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNextError_LEFT_BRACKET(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4189,7 +4189,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNextError_LEFT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -4205,7 +4205,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNextError_POP(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4228,7 +4228,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNextError_PUSH(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4252,7 +4252,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransNextError_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4302,7 +4302,7 @@ public final class SmcParserContext
 
     private void ParserMap_TransGuard_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4332,7 +4332,7 @@ public final class SmcParserContext
 
     private void ParserMap_EndState_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4354,7 +4354,7 @@ public final class SmcParserContext
 
     private void ParserMap_EndState_JUMP(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4377,7 +4377,7 @@ public final class SmcParserContext
 
     private void ParserMap_EndState_POP(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4399,7 +4399,7 @@ public final class SmcParserContext
 
     private void ParserMap_EndState_PUSH(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4422,7 +4422,7 @@ public final class SmcParserContext
 
     private void ParserMap_EndState_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4453,7 +4453,7 @@ public final class SmcParserContext
 
     private void ParserMap_EndStateError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -4469,7 +4469,7 @@ public final class SmcParserContext
 
     private void ParserMap_EndStateError_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -4499,7 +4499,7 @@ public final class SmcParserContext
 
     private void ParserMap_SimpleTrans_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4521,7 +4521,7 @@ public final class SmcParserContext
 
     private void ParserMap_SimpleTrans_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -4543,7 +4543,7 @@ public final class SmcParserContext
 
     private void ParserMap_SimpleTrans_SLASH(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4573,7 +4573,7 @@ public final class SmcParserContext
 
     private void ParserMap_PushTransition_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4595,7 +4595,7 @@ public final class SmcParserContext
 
     private void ParserMap_PushTransition_PUSH(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4623,7 +4623,7 @@ public final class SmcParserContext
 
     private void ParserMap_PushStart_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4645,7 +4645,7 @@ public final class SmcParserContext
 
     private void ParserMap_PushStart_LEFT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4673,7 +4673,7 @@ public final class SmcParserContext
 
     private void ParserMap_PushError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -4689,7 +4689,7 @@ public final class SmcParserContext
 
     private void ParserMap_PushError_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -4711,7 +4711,7 @@ public final class SmcParserContext
 
     private void ParserMap_PushError_RIGHT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4739,7 +4739,7 @@ public final class SmcParserContext
 
     private void ParserMap_PushMap_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4761,7 +4761,7 @@ public final class SmcParserContext
 
     private void ParserMap_PushMap_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4791,7 +4791,7 @@ public final class SmcParserContext
 
     private void ParserMap_PushEnd_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4813,7 +4813,7 @@ public final class SmcParserContext
 
     private void ParserMap_PushEnd_RIGHT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4841,7 +4841,7 @@ public final class SmcParserContext
 
     private void ParserMap_JumpStart_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4863,7 +4863,7 @@ public final class SmcParserContext
 
     private void ParserMap_JumpStart_LEFT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4891,7 +4891,7 @@ public final class SmcParserContext
 
     private void ParserMap_JumpError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -4907,7 +4907,7 @@ public final class SmcParserContext
 
     private void ParserMap_JumpError_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -4929,7 +4929,7 @@ public final class SmcParserContext
 
     private void ParserMap_JumpError_RIGHT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4957,7 +4957,7 @@ public final class SmcParserContext
 
     private void ParserMap_JumpMap_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -4979,7 +4979,7 @@ public final class SmcParserContext
 
     private void ParserMap_JumpMap_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5009,7 +5009,7 @@ public final class SmcParserContext
 
     private void ParserMap_JumpEnd_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5031,7 +5031,7 @@ public final class SmcParserContext
 
     private void ParserMap_JumpEnd_RIGHT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5059,7 +5059,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopStart_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5081,7 +5081,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopStart_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -5103,7 +5103,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopStart_LEFT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5131,7 +5131,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -5147,7 +5147,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopError_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -5169,7 +5169,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopError_RIGHT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5197,7 +5197,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopAction_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5219,7 +5219,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopAction_RIGHT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5239,7 +5239,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopAction_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5269,7 +5269,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopArgs_COMMA(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5289,7 +5289,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopArgs_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5311,7 +5311,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopArgs_RIGHT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5357,7 +5357,7 @@ public final class SmcParserContext
 
     private void ParserMap_PopArgsEnd_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5387,7 +5387,7 @@ public final class SmcParserContext
 
     private void ParserMap_ActionStart_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5409,7 +5409,7 @@ public final class SmcParserContext
 
     private void ParserMap_ActionStart_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -5439,7 +5439,7 @@ public final class SmcParserContext
 
     private void ParserMap_ActionEnd_actionsDone(List<SmcAction> actions, int lineNumber)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5463,7 +5463,7 @@ public final class SmcParserContext
 
     private void ParserMap_ActionEnd_actionsError()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5491,7 +5491,7 @@ public final class SmcParserContext
 
     private void ParserMap_ActionStartError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -5507,7 +5507,7 @@ public final class SmcParserContext
 
     private void ParserMap_ActionStartError_LEFT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -5550,7 +5550,7 @@ public final class SmcParserContext
 
     private void ParamMap_Start_DOLLAR(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.getTargetLanguage() == TargetLanguage.PERL ||
        ctxt.getTargetLanguage() == TargetLanguage.PHP ||
@@ -5582,7 +5582,7 @@ public final class SmcParserContext
 
     private void ParamMap_Start_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5604,7 +5604,7 @@ public final class SmcParserContext
 
     private void ParamMap_Start_RIGHT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5627,7 +5627,7 @@ public final class SmcParserContext
 
     private void ParamMap_Start_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5657,7 +5657,7 @@ public final class SmcParserContext
 
     private void ParamMap_Dollar_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5679,7 +5679,7 @@ public final class SmcParserContext
 
     private void ParamMap_Dollar_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5709,7 +5709,7 @@ public final class SmcParserContext
 
     private void ParamMap_ParamSeparator_COLON(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5729,7 +5729,7 @@ public final class SmcParserContext
 
     private void ParamMap_ParamSeparator_COMMA(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.getTargetLanguage() == TargetLanguage.TCL ||
        ctxt.getTargetLanguage() == TargetLanguage.GROOVY ||
@@ -5779,7 +5779,7 @@ public final class SmcParserContext
 
     private void ParamMap_ParamSeparator_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5801,7 +5801,7 @@ public final class SmcParserContext
 
     private void ParamMap_ParamSeparator_RIGHT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.getTargetLanguage() == TargetLanguage.TCL ||
        ctxt.getTargetLanguage() == TargetLanguage.GROOVY ||
@@ -5883,7 +5883,7 @@ public final class SmcParserContext
 
     private void ParamMap_ParamType_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5913,7 +5913,7 @@ public final class SmcParserContext
 
     private void ParamMap_NextParam_COMMA(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5935,7 +5935,7 @@ public final class SmcParserContext
 
     private void ParamMap_NextParam_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -5957,7 +5957,7 @@ public final class SmcParserContext
 
     private void ParamMap_NextParam_RIGHT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6009,7 +6009,7 @@ public final class SmcParserContext
 
     private void ParamMap_Error_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6040,7 +6040,7 @@ public final class SmcParserContext
 
     private void ActionMap_Start_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6063,7 +6063,7 @@ public final class SmcParserContext
 
     private void ActionMap_Start_RIGHT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6086,7 +6086,7 @@ public final class SmcParserContext
 
     private void ActionMap_Start_WORD(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6116,7 +6116,7 @@ public final class SmcParserContext
 
     private void ActionMap_ActionName_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6139,7 +6139,7 @@ public final class SmcParserContext
 
     private void ActionMap_ActionName_EQUAL(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         if (ctxt.getTargetLanguage() != TargetLanguage.GRAPH &&
        ctxt.getTargetLanguage() != TargetLanguage.C_SHARP &&
@@ -6192,7 +6192,7 @@ public final class SmcParserContext
 
     private void ActionMap_ActionName_LEFT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -6222,7 +6222,7 @@ public final class SmcParserContext
 
     private void ActionMap_ActionArgs_argsDone(List<String> args)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6244,7 +6244,7 @@ public final class SmcParserContext
 
     private void ActionMap_ActionArgs_argsError()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6272,7 +6272,7 @@ public final class SmcParserContext
 
     private void ActionMap_ActionEnd_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6294,7 +6294,7 @@ public final class SmcParserContext
 
     private void ActionMap_ActionEnd_SEMICOLON(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6342,7 +6342,7 @@ public final class SmcParserContext
 
     private void ActionMap_PropertyAssignment_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6364,7 +6364,7 @@ public final class SmcParserContext
 
     private void ActionMap_PropertyAssignment_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6397,7 +6397,7 @@ public final class SmcParserContext
 
     private void ActionMap_ActionError_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
@@ -6413,7 +6413,7 @@ public final class SmcParserContext
 
     private void ActionMap_ActionError_RIGHT_BRACE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6460,7 +6460,7 @@ public final class SmcParserContext
 
     private void ArgsMap_Start_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6490,7 +6490,7 @@ public final class SmcParserContext
 
     private void ArgsMap_NextArg_COMMA(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6512,7 +6512,7 @@ public final class SmcParserContext
 
     private void ArgsMap_NextArg_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6534,7 +6534,7 @@ public final class SmcParserContext
 
     private void ArgsMap_NextArg_RIGHT_PAREN(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 
@@ -6584,7 +6584,7 @@ public final class SmcParserContext
 
     private void ArgsMap_Error_SOURCE(SmcLexer.Token token)
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         exitState();
 

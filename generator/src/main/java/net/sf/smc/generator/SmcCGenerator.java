@@ -13,7 +13,7 @@
 //
 // The Initial Developer of the Original Code is Charles W. Rapp.
 // Portions created by Charles W. Rapp are
-// Copyright (C) 2005, 2008 - 2009. Charles W. Rapp.
+// Copyright (C) 2005, 2008 - 2009, 2019. Charles W. Rapp.
 // All Rights Reserved.
 //
 // Contributor(s):
@@ -706,9 +706,9 @@ public final class SmcCGenerator
         String mapName = map.getName();
         String stateName = state.getInstanceName();
         String transName = transition.getName();
-        boolean nullCondition = false;
+        SmcGuard nullGuard = null;
         List<SmcGuard> guards = transition.getGuards();
-        Iterator<SmcGuard> git;
+        Iterator<SmcGuard> git = guards.iterator();
         SmcGuard guard;
 
         // If a package has been specified,
@@ -781,7 +781,7 @@ public final class SmcCGenerator
         {
             guard = guards.get(0);
 
-            if (!guard.getActions().isEmpty() &&
+            if (guard.hasActions() &&
                 isLoopback(guard.getTransType(), guard.getEndState()))
             {
                 mTarget.print("    const struct ");
@@ -806,28 +806,48 @@ public final class SmcCGenerator
         }
 
         // Loop through the guards and print each one.
-        for (git = guards.iterator(), mGuardIndex = 0;
-             git.hasNext();
-             ++mGuardIndex)
+        mGuardIndex = 0;
+        while (git.hasNext())
         {
             guard = git.next();
 
-            // Count up the number of guards with no condition.
-            if (guard.getCondition().length() == 0)
+            // Output the no condition guard *after* all other
+            // guarded transitions.
+            if (!guard.hasCondition())
             {
-                nullCondition = true;
+                nullGuard = guard;
             }
-
-            guard.accept(this);
+            else
+            {
+                guard.accept(this);
+                ++mGuardIndex;
+            }
         }
 
+        // Is there an unguarded transition?
+        if (nullGuard != null)
+        {
+            // Does this guard have any actions or is this guard
+            // *not* an internal loopback transition?
+            if (nullGuard.hasActions() ||
+                !(nullGuard.getEndState()).equals(SmcElement.NIL_STATE) ||
+                nullGuard.getTransType() == TransType.TRANS_PUSH ||
+                nullGuard.getTransType() == TransType.TRANS_POP)
+            {
+                // Need to output either the action and/or the
+                // next state, so output the guard.
+                nullGuard.accept(this);
+            }
+
+            mTarget.println();
+        }
         // If all guards have a condition, then create a final
         // "else" clause which passes control to the default
         // transition.
-        if (mGuardIndex > 0 && !nullCondition)
+        else if (mGuardIndex > 0)
         {
-            // If there is only one transition definition, then
-            // close off the guard.
+            // If there was only one guard, then we need to close
+            // off its body.
             if (mGuardCount == 1)
             {
                 mTarget.println("    }");
@@ -857,9 +877,6 @@ public final class SmcCGenerator
 
             mTarget.println(");");
             mTarget.println("    }");
-        }
-        else if (mGuardCount > 1)
-        {
             mTarget.println();
         }
 
@@ -992,7 +1009,7 @@ public final class SmcCGenerator
         {
             // There is only one guard. Does this guard have a
             // condition.
-            if (condition.length() == 0)
+            if (condition == null || condition.isEmpty())
             {
                 // Actually, this is a plain, old, vaniila
                 // transition.

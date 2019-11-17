@@ -149,9 +149,9 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
 
@@ -168,7 +168,7 @@ public final class SmcLexerContext
 
     public void EOL()
     {
-        _transition = "EOL";
+        mTransition = "EOL";
         try
         {
             final TransitionHandle th =
@@ -178,18 +178,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void alpha()
     {
-        _transition = "alpha";
+        mTransition = "alpha";
         try
         {
             final TransitionHandle th =
@@ -199,18 +199,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void asterisk()
     {
-        _transition = "asterisk";
+        mTransition = "asterisk";
         try
         {
             final TransitionHandle th =
@@ -220,18 +220,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void colon()
     {
-        _transition = "colon";
+        mTransition = "colon";
         try
         {
             final TransitionHandle th =
@@ -241,18 +241,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void comma()
     {
-        _transition = "comma";
+        mTransition = "comma";
         try
         {
             final TransitionHandle th =
@@ -262,18 +262,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void commentDone()
     {
-        _transition = "commentDone";
+        mTransition = "commentDone";
         try
         {
             final TransitionHandle th =
@@ -283,18 +283,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void digit()
     {
-        _transition = "digit";
+        mTransition = "digit";
         try
         {
             final TransitionHandle th =
@@ -304,18 +304,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void dollar()
     {
-        _transition = "dollar";
+        mTransition = "dollar";
         try
         {
             final TransitionHandle th =
@@ -325,18 +325,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void equal()
     {
-        _transition = "equal";
+        mTransition = "equal";
         try
         {
             final TransitionHandle th =
@@ -346,18 +346,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void gt()
     {
-        _transition = "gt";
+        mTransition = "gt";
         try
         {
             final TransitionHandle th =
@@ -367,18 +367,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void left_brace()
     {
-        _transition = "left_brace";
+        mTransition = "left_brace";
         try
         {
             final TransitionHandle th =
@@ -388,18 +388,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void left_bracket()
     {
-        _transition = "left_bracket";
+        mTransition = "left_bracket";
         try
         {
             final TransitionHandle th =
@@ -409,18 +409,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void left_paren()
     {
-        _transition = "left_paren";
+        mTransition = "left_paren";
         try
         {
             final TransitionHandle th =
@@ -430,18 +430,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void lt()
     {
-        _transition = "lt";
+        mTransition = "lt";
         try
         {
             final TransitionHandle th =
@@ -451,18 +451,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void percent()
     {
-        _transition = "percent";
+        mTransition = "percent";
         try
         {
             final TransitionHandle th =
@@ -472,18 +472,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void period()
     {
-        _transition = "period";
+        mTransition = "period";
         try
         {
             final TransitionHandle th =
@@ -493,18 +493,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void right_brace()
     {
-        _transition = "right_brace";
+        mTransition = "right_brace";
         try
         {
             final TransitionHandle th =
@@ -514,18 +514,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void right_paren()
     {
-        _transition = "right_paren";
+        mTransition = "right_paren";
         try
         {
             final TransitionHandle th =
@@ -535,18 +535,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void semicolon()
     {
-        _transition = "semicolon";
+        mTransition = "semicolon";
         try
         {
             final TransitionHandle th =
@@ -556,18 +556,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void slash()
     {
-        _transition = "slash";
+        mTransition = "slash";
         try
         {
             final TransitionHandle th =
@@ -577,18 +577,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void sourceDone()
     {
-        _transition = "sourceDone";
+        mTransition = "sourceDone";
         try
         {
             final TransitionHandle th =
@@ -598,18 +598,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void underscore()
     {
-        _transition = "underscore";
+        mTransition = "underscore";
         try
         {
             final TransitionHandle th =
@@ -619,18 +619,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void unicode()
     {
-        _transition = "unicode";
+        mTransition = "unicode";
         try
         {
             final TransitionHandle th =
@@ -640,18 +640,18 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
     public void whitespace()
     {
-        _transition = "whitespace";
+        mTransition = "whitespace";
         try
         {
             final TransitionHandle th =
@@ -661,12 +661,12 @@ public final class SmcLexerContext
         }
         catch (Throwable tex)
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                tex.printStackTrace(_debugStream);
+                tex.printStackTrace(mDebugStream);
             }
         }
-        _transition = "";
+        mTransition = "";
         return;
     }
 
@@ -680,28 +680,28 @@ public final class SmcLexerContext
 
     private void TokenMap_Default_asterisk()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Default");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Default.asterisk()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Default.asterisk()");
             }
 
             clearState();
             ctxt.badToken("Unknown token");
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Default.asterisk()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Default.asterisk()");
             }
         }
         finally
@@ -725,19 +725,19 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_EOL()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.EOL()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.EOL()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.EOL()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.EOL()");
             }
         }
         finally
@@ -751,29 +751,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_alpha()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Start");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Start");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.alpha()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.alpha()");
             }
 
             clearState();
             ctxt.startToken();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.alpha()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.alpha()");
             }
         }
         finally
@@ -789,29 +789,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_colon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Start");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Start");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.colon()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.colon()");
             }
 
             clearState();
             ctxt.startToken();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.colon()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.colon()");
             }
         }
         finally
@@ -827,13 +827,13 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_comma()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.comma()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.comma()");
             }
 
             clearState();
@@ -841,9 +841,9 @@ public final class SmcLexerContext
             ctxt.addToToken();
             ctxt.endToken(SmcLexer.COMMA);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.comma()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.comma()");
             }
         }
         finally
@@ -858,13 +858,13 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_dollar()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.dollar()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.dollar()");
             }
 
             clearState();
@@ -872,9 +872,9 @@ public final class SmcLexerContext
             ctxt.addToToken();
             ctxt.endToken(SmcLexer.DOLLAR);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.dollar()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.dollar()");
             }
         }
         finally
@@ -889,13 +889,13 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_equal()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.equal()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.equal()");
             }
 
             clearState();
@@ -903,9 +903,9 @@ public final class SmcLexerContext
             ctxt.addToToken();
             ctxt.endToken(SmcLexer.EQUAL);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.equal()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.equal()");
             }
         }
         finally
@@ -920,13 +920,13 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_left_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.left_brace()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.left_brace()");
             }
 
             clearState();
@@ -934,9 +934,9 @@ public final class SmcLexerContext
             ctxt.addToToken();
             ctxt.endToken(SmcLexer.LEFT_BRACE);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.left_brace()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.left_brace()");
             }
         }
         finally
@@ -951,13 +951,13 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_left_bracket()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.left_bracket()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.left_bracket()");
             }
 
             clearState();
@@ -965,9 +965,9 @@ public final class SmcLexerContext
             ctxt.addToToken();
             ctxt.endToken(SmcLexer.LEFT_BRACKET);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.left_bracket()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.left_bracket()");
             }
         }
         finally
@@ -982,13 +982,13 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_left_paren()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.left_paren()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.left_paren()");
             }
 
             clearState();
@@ -996,9 +996,9 @@ public final class SmcLexerContext
             ctxt.addToToken();
             ctxt.endToken(SmcLexer.LEFT_PAREN);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.left_paren()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.left_paren()");
             }
         }
         finally
@@ -1013,29 +1013,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_percent()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Start");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Start");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.percent()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.percent()");
             }
 
             clearState();
             ctxt.startToken();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.percent()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.percent()");
             }
         }
         finally
@@ -1051,13 +1051,13 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_right_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.right_brace()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.right_brace()");
             }
 
             clearState();
@@ -1065,9 +1065,9 @@ public final class SmcLexerContext
             ctxt.addToToken();
             ctxt.endToken(SmcLexer.RIGHT_BRACE);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.right_brace()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.right_brace()");
             }
         }
         finally
@@ -1082,13 +1082,13 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_right_paren()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.right_paren()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.right_paren()");
             }
 
             clearState();
@@ -1096,9 +1096,9 @@ public final class SmcLexerContext
             ctxt.addToToken();
             ctxt.endToken(SmcLexer.RIGHT_PAREN);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.right_paren()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.right_paren()");
             }
         }
         finally
@@ -1113,13 +1113,13 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_semicolon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.semicolon()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.semicolon()");
             }
 
             clearState();
@@ -1127,9 +1127,9 @@ public final class SmcLexerContext
             ctxt.addToToken();
             ctxt.endToken(SmcLexer.SEMICOLON);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.semicolon()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.semicolon()");
             }
         }
         finally
@@ -1144,26 +1144,26 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_slash()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Start");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Start");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.slash()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.slash()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.slash()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.slash()");
             }
         }
         finally
@@ -1179,29 +1179,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_underscore()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Start");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Start");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.underscore()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.underscore()");
             }
 
             clearState();
             ctxt.startToken();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.underscore()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.underscore()");
             }
         }
         finally
@@ -1217,13 +1217,13 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_unicode()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.unicode()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.unicode()");
             }
 
             clearState();
@@ -1232,9 +1232,9 @@ public final class SmcLexerContext
             ctxt.outputChar();
             ctxt.badToken("Unknown character");
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.unicode()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.unicode()");
             }
         }
         finally
@@ -1249,19 +1249,19 @@ public final class SmcLexerContext
 
     private void TokenMap_Start_whitespace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Start.whitespace()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Start.whitespace()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Start.whitespace()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Start.whitespace()");
             }
         }
         finally
@@ -1283,29 +1283,29 @@ public final class SmcLexerContext
 
     private void TokenMap_CommentStart_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.CommentStart");
+            mDebugStream.println("LEAVING STATE   : TokenMap.CommentStart");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.CommentStart.Default()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.CommentStart.Default()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.endToken(SmcLexer.SLASH);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.CommentStart.Default()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.CommentStart.Default()");
             }
         }
         finally
@@ -1321,19 +1321,19 @@ public final class SmcLexerContext
 
     private void TokenMap_CommentStart_asterisk()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.CommentStart.asterisk()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.CommentStart.asterisk()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.CommentStart.asterisk()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.CommentStart.asterisk()");
             }
         }
         finally
@@ -1349,26 +1349,26 @@ public final class SmcLexerContext
 
     private void TokenMap_CommentStart_commentDone()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.CommentStart");
+            mDebugStream.println("LEAVING STATE   : TokenMap.CommentStart");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.CommentStart.commentDone()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.CommentStart.commentDone()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.CommentStart.commentDone()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.CommentStart.commentDone()");
             }
         }
         finally
@@ -1384,19 +1384,19 @@ public final class SmcLexerContext
 
     private void TokenMap_CommentStart_slash()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.CommentStart.slash()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.CommentStart.slash()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.CommentStart.slash()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.CommentStart.slash()");
             }
         }
         finally
@@ -1420,29 +1420,29 @@ public final class SmcLexerContext
 
     private void TokenMap_PercentStart_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.PercentStart");
+            mDebugStream.println("LEAVING STATE   : TokenMap.PercentStart");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.PercentStart.Default()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.PercentStart.Default()");
             }
 
             clearState();
             ctxt.addToToken();
             ctxt.badToken("Unknown % directive");
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.PercentStart.Default()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.PercentStart.Default()");
             }
         }
         finally
@@ -1458,28 +1458,28 @@ public final class SmcLexerContext
 
     private void TokenMap_PercentStart_alpha()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.PercentStart");
+            mDebugStream.println("LEAVING STATE   : TokenMap.PercentStart");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.PercentStart.alpha()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.PercentStart.alpha()");
             }
 
             clearState();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.PercentStart.alpha()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.PercentStart.alpha()");
             }
         }
         finally
@@ -1495,21 +1495,21 @@ public final class SmcLexerContext
 
     private void TokenMap_PercentStart_left_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.PercentStart.left_brace()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.PercentStart.left_brace()");
             }
 
             clearState();
             ctxt.startToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.PercentStart.left_brace()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.PercentStart.left_brace()");
             }
         }
         finally
@@ -1526,29 +1526,29 @@ public final class SmcLexerContext
 
     private void TokenMap_PercentStart_percent()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.PercentStart");
+            mDebugStream.println("LEAVING STATE   : TokenMap.PercentStart");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.PercentStart.percent()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.PercentStart.percent()");
             }
 
             clearState();
             ctxt.addToToken();
             ctxt.endToken(SmcLexer.EOD);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.PercentStart.percent()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.PercentStart.percent()");
             }
         }
         finally
@@ -1564,29 +1564,29 @@ public final class SmcLexerContext
 
     private void TokenMap_PercentStart_right_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.PercentStart");
+            mDebugStream.println("LEAVING STATE   : TokenMap.PercentStart");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.PercentStart.right_brace()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.PercentStart.right_brace()");
             }
 
             clearState();
             ctxt.addToToken();
             ctxt.badToken("End-of-source appears without matching start-of-source");
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.PercentStart.right_brace()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.PercentStart.right_brace()");
             }
         }
         finally
@@ -1602,26 +1602,26 @@ public final class SmcLexerContext
 
     private void TokenMap_PercentStart_sourceDone()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.PercentStart");
+            mDebugStream.println("LEAVING STATE   : TokenMap.PercentStart");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.PercentStart.sourceDone()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.PercentStart.sourceDone()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.PercentStart.sourceDone()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.PercentStart.sourceDone()");
             }
         }
         finally
@@ -1645,29 +1645,29 @@ public final class SmcLexerContext
 
     private void TokenMap_PercentKeyword_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.PercentKeyword");
+            mDebugStream.println("LEAVING STATE   : TokenMap.PercentKeyword");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.PercentKeyword.Default()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.PercentKeyword.Default()");
             }
 
             clearState();
             ctxt.addToToken();
             ctxt.badToken("Unknown % directive");
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.PercentKeyword.Default()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.PercentKeyword.Default()");
             }
         }
         finally
@@ -1683,28 +1683,28 @@ public final class SmcLexerContext
 
     private void TokenMap_PercentKeyword_EOL()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.PercentKeyword");
+            mDebugStream.println("LEAVING STATE   : TokenMap.PercentKeyword");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.PercentKeyword.EOL()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.PercentKeyword.EOL()");
             }
 
             clearState();
             ctxt.checkPercentKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.PercentKeyword.EOL()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.PercentKeyword.EOL()");
             }
         }
         finally
@@ -1720,21 +1720,21 @@ public final class SmcLexerContext
 
     private void TokenMap_PercentKeyword_alpha()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.PercentKeyword.alpha()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.PercentKeyword.alpha()");
             }
 
             clearState();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.PercentKeyword.alpha()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.PercentKeyword.alpha()");
             }
         }
         finally
@@ -1749,28 +1749,28 @@ public final class SmcLexerContext
 
     private void TokenMap_PercentKeyword_whitespace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.PercentKeyword");
+            mDebugStream.println("LEAVING STATE   : TokenMap.PercentKeyword");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.PercentKeyword.whitespace()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.PercentKeyword.whitespace()");
             }
 
             clearState();
             ctxt.checkPercentKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.PercentKeyword.whitespace()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.PercentKeyword.whitespace()");
             }
         }
         finally
@@ -1794,28 +1794,28 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.Default()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.Default()");
             }
 
             clearState();
             ctxt.badToken("Unknown token");
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.Default()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.Default()");
             }
         }
         finally
@@ -1831,28 +1831,28 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_EOL()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.EOL()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.EOL()");
             }
 
             clearState();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.EOL()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.EOL()");
             }
         }
         finally
@@ -1868,21 +1868,21 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_alpha()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.alpha()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.alpha()");
             }
 
             clearState();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.alpha()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.alpha()");
             }
         }
         finally
@@ -1897,29 +1897,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_asterisk()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.asterisk()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.asterisk()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.asterisk()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.asterisk()");
             }
         }
         finally
@@ -1935,26 +1935,26 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_colon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.colon()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.colon()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.colon()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.colon()");
             }
         }
         finally
@@ -1970,29 +1970,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_comma()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.comma()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.comma()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.comma()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.comma()");
             }
         }
         finally
@@ -2008,21 +2008,21 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_digit()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.digit()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.digit()");
             }
 
             clearState();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.digit()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.digit()");
             }
         }
         finally
@@ -2037,29 +2037,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_dollar()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.dollar()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.dollar()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.dollar()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.dollar()");
             }
         }
         finally
@@ -2075,29 +2075,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_equal()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.equal()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.equal()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.equal()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.equal()");
             }
         }
         finally
@@ -2113,21 +2113,21 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_gt()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.gt()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.gt()");
             }
 
             clearState();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.gt()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.gt()");
             }
         }
         finally
@@ -2142,29 +2142,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_left_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.left_brace()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.left_brace()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.left_brace()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.left_brace()");
             }
         }
         finally
@@ -2180,29 +2180,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_left_bracket()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.left_bracket()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.left_bracket()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.left_bracket()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.left_bracket()");
             }
         }
         finally
@@ -2218,29 +2218,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_left_paren()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.left_paren()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.left_paren()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.left_paren()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.left_paren()");
             }
         }
         finally
@@ -2256,21 +2256,21 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_lt()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.lt()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.lt()");
             }
 
             clearState();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.lt()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.lt()");
             }
         }
         finally
@@ -2285,21 +2285,21 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_period()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.period()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.period()");
             }
 
             clearState();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.period()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.period()");
             }
         }
         finally
@@ -2314,29 +2314,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_right_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.right_brace()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.right_brace()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.right_brace()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.right_brace()");
             }
         }
         finally
@@ -2352,29 +2352,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_right_paren()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.right_paren()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.right_paren()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.right_paren()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.right_paren()");
             }
         }
         finally
@@ -2390,29 +2390,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_semicolon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.semicolon()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.semicolon()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.semicolon()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.semicolon()");
             }
         }
         finally
@@ -2428,29 +2428,29 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_slash()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.slash()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.slash()");
             }
 
             clearState();
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.slash()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.slash()");
             }
         }
         finally
@@ -2466,21 +2466,21 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_underscore()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.underscore()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.underscore()");
             }
 
             clearState();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.underscore()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.underscore()");
             }
         }
         finally
@@ -2495,28 +2495,28 @@ public final class SmcLexerContext
 
     private void TokenMap_Word_whitespace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Word");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Word");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Word.whitespace()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Word.whitespace()");
             }
 
             clearState();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Word.whitespace()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Word.whitespace()");
             }
         }
         finally
@@ -2540,20 +2540,20 @@ public final class SmcLexerContext
 
     private void TokenMap_Scope_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Scope");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Scope");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Scope.Default()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Scope.Default()");
             }
 
             clearState();
@@ -2561,9 +2561,9 @@ public final class SmcLexerContext
             ctxt.ungetChar();
             ctxt.checkKeyword();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Scope.Default()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Scope.Default()");
             }
         }
         finally
@@ -2579,28 +2579,28 @@ public final class SmcLexerContext
 
     private void TokenMap_Scope_colon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Scope");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Scope");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Scope.colon()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Scope.colon()");
             }
 
             clearState();
             ctxt.addToToken("::");
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Scope.colon()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Scope.colon()");
             }
         }
         finally
@@ -2624,20 +2624,20 @@ public final class SmcLexerContext
 
     private void TokenMap_Colon_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Colon");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Colon");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Colon.Default()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Colon.Default()");
             }
 
             clearState();
@@ -2645,9 +2645,9 @@ public final class SmcLexerContext
             ctxt.addToToken(":");
             ctxt.endToken(SmcLexer.COLON);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Colon.Default()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Colon.Default()");
             }
         }
         finally
@@ -2663,28 +2663,28 @@ public final class SmcLexerContext
 
     private void TokenMap_Colon_colon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : TokenMap.Colon");
+            mDebugStream.println("LEAVING STATE   : TokenMap.Colon");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: TokenMap.Colon.colon()");
+                mDebugStream.println("ENTER TRANSITION: TokenMap.Colon.colon()");
             }
 
             clearState();
             ctxt.addToToken("::");
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : TokenMap.Colon.colon()");
+                mDebugStream.println("EXIT TRANSITION : TokenMap.Colon.colon()");
             }
         }
         finally
@@ -2708,26 +2708,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_alpha()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.alpha()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.alpha()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.alpha()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.alpha()");
             }
         }
         finally
@@ -2743,26 +2743,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_digit()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.digit()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.digit()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.digit()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.digit()");
             }
         }
         finally
@@ -2778,26 +2778,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_percent()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.percent()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.percent()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.percent()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.percent()");
             }
         }
         finally
@@ -2813,26 +2813,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_slash()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.slash()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.slash()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.slash()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.slash()");
             }
         }
         finally
@@ -2848,26 +2848,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_asterisk()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.asterisk()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.asterisk()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.asterisk()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.asterisk()");
             }
         }
         finally
@@ -2883,26 +2883,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_left_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.left_brace()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.left_brace()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.left_brace()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.left_brace()");
             }
         }
         finally
@@ -2918,26 +2918,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_right_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.right_brace()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.right_brace()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.right_brace()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.right_brace()");
             }
         }
         finally
@@ -2953,26 +2953,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_left_bracket()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.left_bracket()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.left_bracket()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.left_bracket()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.left_bracket()");
             }
         }
         finally
@@ -2988,26 +2988,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_left_paren()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.left_paren()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.left_paren()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.left_paren()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.left_paren()");
             }
         }
         finally
@@ -3023,26 +3023,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_right_paren()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.right_paren()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.right_paren()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.right_paren()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.right_paren()");
             }
         }
         finally
@@ -3058,26 +3058,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_period()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.period()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.period()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.period()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.period()");
             }
         }
         finally
@@ -3093,26 +3093,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_lt()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.lt()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.lt()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.lt()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.lt()");
             }
         }
         finally
@@ -3128,26 +3128,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_gt()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.gt()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.gt()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.gt()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.gt()");
             }
         }
         finally
@@ -3163,26 +3163,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_colon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.colon()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.colon()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.colon()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.colon()");
             }
         }
         finally
@@ -3198,26 +3198,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_comma()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.comma()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.comma()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.comma()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.comma()");
             }
         }
         finally
@@ -3233,26 +3233,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_semicolon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.semicolon()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.semicolon()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.semicolon()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.semicolon()");
             }
         }
         finally
@@ -3268,26 +3268,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_underscore()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.underscore()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.underscore()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.underscore()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.underscore()");
             }
         }
         finally
@@ -3303,26 +3303,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_equal()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.equal()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.equal()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.equal()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.equal()");
             }
         }
         finally
@@ -3338,26 +3338,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_dollar()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.dollar()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.dollar()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.dollar()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.dollar()");
             }
         }
         finally
@@ -3373,26 +3373,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_whitespace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.whitespace()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.whitespace()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.whitespace()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.whitespace()");
             }
         }
         finally
@@ -3408,26 +3408,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_EOL()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.EOL()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.EOL()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.EOL()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.EOL()");
             }
         }
         finally
@@ -3443,26 +3443,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Default_unicode()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Default.unicode()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Default.unicode()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Default.unicode()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Default.unicode()");
             }
         }
         finally
@@ -3486,26 +3486,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Start_asterisk()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Start");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Start");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Start.asterisk()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Start.asterisk()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Start.asterisk()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Start.asterisk()");
             }
         }
         finally
@@ -3521,26 +3521,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_Start_slash()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.Start");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.Start");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.Start.slash()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.Start.slash()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.Start.slash()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.Start.slash()");
             }
         }
         finally
@@ -3564,19 +3564,19 @@ public final class SmcLexerContext
 
     private void OldCommentMap_CommentStart_asterisk()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.CommentStart.asterisk()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.CommentStart.asterisk()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.CommentStart.asterisk()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.CommentStart.asterisk()");
             }
         }
         finally
@@ -3592,26 +3592,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_CommentStart_commentDone()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.CommentStart");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.CommentStart");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.CommentStart.commentDone()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.CommentStart.commentDone()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.CommentStart.commentDone()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.CommentStart.commentDone()");
             }
         }
         finally
@@ -3627,19 +3627,19 @@ public final class SmcLexerContext
 
     private void OldCommentMap_CommentStart_slash()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.CommentStart.slash()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.CommentStart.slash()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.CommentStart.slash()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.CommentStart.slash()");
             }
         }
         finally
@@ -3663,19 +3663,19 @@ public final class SmcLexerContext
 
     private void OldCommentMap_CommentEnd_asterisk()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.CommentEnd.asterisk()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.CommentEnd.asterisk()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.CommentEnd.asterisk()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.CommentEnd.asterisk()");
             }
         }
         finally
@@ -3689,26 +3689,26 @@ public final class SmcLexerContext
 
     private void OldCommentMap_CommentEnd_slash()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : OldCommentMap.CommentEnd");
+            mDebugStream.println("LEAVING STATE   : OldCommentMap.CommentEnd");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: OldCommentMap.CommentEnd.slash()");
+                mDebugStream.println("ENTER TRANSITION: OldCommentMap.CommentEnd.slash()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : OldCommentMap.CommentEnd.slash()");
+                mDebugStream.println("EXIT TRANSITION : OldCommentMap.CommentEnd.slash()");
             }
         }
         finally
@@ -3733,26 +3733,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_alpha()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.alpha()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.alpha()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.alpha()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.alpha()");
             }
         }
         finally
@@ -3768,26 +3768,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_digit()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.digit()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.digit()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.digit()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.digit()");
             }
         }
         finally
@@ -3803,26 +3803,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_percent()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.percent()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.percent()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.percent()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.percent()");
             }
         }
         finally
@@ -3838,26 +3838,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_slash()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.slash()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.slash()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.slash()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.slash()");
             }
         }
         finally
@@ -3873,26 +3873,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_asterisk()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.asterisk()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.asterisk()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.asterisk()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.asterisk()");
             }
         }
         finally
@@ -3908,26 +3908,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_left_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.left_brace()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.left_brace()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.left_brace()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.left_brace()");
             }
         }
         finally
@@ -3943,26 +3943,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_right_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.right_brace()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.right_brace()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.right_brace()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.right_brace()");
             }
         }
         finally
@@ -3978,26 +3978,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_left_bracket()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.left_bracket()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.left_bracket()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.left_bracket()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.left_bracket()");
             }
         }
         finally
@@ -4013,26 +4013,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_left_paren()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.left_paren()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.left_paren()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.left_paren()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.left_paren()");
             }
         }
         finally
@@ -4048,26 +4048,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_right_paren()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.right_paren()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.right_paren()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.right_paren()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.right_paren()");
             }
         }
         finally
@@ -4083,26 +4083,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_period()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.period()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.period()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.period()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.period()");
             }
         }
         finally
@@ -4118,26 +4118,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_lt()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.lt()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.lt()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.lt()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.lt()");
             }
         }
         finally
@@ -4153,26 +4153,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_gt()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.gt()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.gt()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.gt()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.gt()");
             }
         }
         finally
@@ -4188,26 +4188,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_colon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.colon()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.colon()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.colon()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.colon()");
             }
         }
         finally
@@ -4223,26 +4223,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_comma()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.comma()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.comma()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.comma()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.comma()");
             }
         }
         finally
@@ -4258,26 +4258,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_semicolon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.semicolon()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.semicolon()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.semicolon()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.semicolon()");
             }
         }
         finally
@@ -4293,26 +4293,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_underscore()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.underscore()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.underscore()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.underscore()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.underscore()");
             }
         }
         finally
@@ -4328,26 +4328,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_equal()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.equal()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.equal()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.equal()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.equal()");
             }
         }
         finally
@@ -4363,26 +4363,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_dollar()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.dollar()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.dollar()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.dollar()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.dollar()");
             }
         }
         finally
@@ -4398,26 +4398,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_whitespace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.whitespace()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.whitespace()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.whitespace()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.whitespace()");
             }
         }
         finally
@@ -4433,26 +4433,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Default_unicode()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Default");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Default");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Default.unicode()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Default.unicode()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Default.unicode()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Default.unicode()");
             }
         }
         finally
@@ -4476,26 +4476,26 @@ public final class SmcLexerContext
 
     private void NewCommentMap_Start_EOL()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : NewCommentMap.Start");
+            mDebugStream.println("LEAVING STATE   : NewCommentMap.Start");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: NewCommentMap.Start.EOL()");
+                mDebugStream.println("ENTER TRANSITION: NewCommentMap.Start.EOL()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : NewCommentMap.Start.EOL()");
+                mDebugStream.println("EXIT TRANSITION : NewCommentMap.Start.EOL()");
             }
         }
         finally
@@ -4520,28 +4520,28 @@ public final class SmcLexerContext
 
     private void SourceMap_Start_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : SourceMap.Start");
+            mDebugStream.println("LEAVING STATE   : SourceMap.Start");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.Start.Default()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.Start.Default()");
             }
 
             clearState();
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.Start.Default()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.Start.Default()");
             }
         }
         finally
@@ -4557,26 +4557,26 @@ public final class SmcLexerContext
 
     private void SourceMap_Start_percent()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : SourceMap.Start");
+            mDebugStream.println("LEAVING STATE   : SourceMap.Start");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.Start.percent()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.Start.percent()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.Start.percent()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.Start.percent()");
             }
         }
         finally
@@ -4600,29 +4600,29 @@ public final class SmcLexerContext
 
     private void SourceMap_SourceEnd_Default()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : SourceMap.SourceEnd");
+            mDebugStream.println("LEAVING STATE   : SourceMap.SourceEnd");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.SourceEnd.Default()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.SourceEnd.Default()");
             }
 
             clearState();
             ctxt.addToToken("%");
             ctxt.addToToken();
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.SourceEnd.Default()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.SourceEnd.Default()");
             }
         }
         finally
@@ -4638,21 +4638,21 @@ public final class SmcLexerContext
 
     private void SourceMap_SourceEnd_percent()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.SourceEnd.percent()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.SourceEnd.percent()");
             }
 
             clearState();
             ctxt.addToToken("%");
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.SourceEnd.percent()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.SourceEnd.percent()");
             }
         }
         finally
@@ -4667,28 +4667,28 @@ public final class SmcLexerContext
 
     private void SourceMap_SourceEnd_right_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
-        if (_debugFlag == true)
+        if (mDebugFlag == true)
         {
-            _debugStream.println("LEAVING STATE   : SourceMap.SourceEnd");
+            mDebugStream.println("LEAVING STATE   : SourceMap.SourceEnd");
         }
 
         exitState();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.SourceEnd.right_brace()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.SourceEnd.right_brace()");
             }
 
             clearState();
             ctxt.endToken(SmcLexer.SOURCE);
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.SourceEnd.right_brace()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.SourceEnd.right_brace()");
             }
         }
         finally
@@ -4713,19 +4713,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_EOL()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.EOL()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.EOL()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.EOL()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.EOL()");
             }
         }
         finally
@@ -4739,19 +4739,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_alpha()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.alpha()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.alpha()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.alpha()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.alpha()");
             }
         }
         finally
@@ -4765,19 +4765,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_asterisk()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.asterisk()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.asterisk()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.asterisk()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.asterisk()");
             }
         }
         finally
@@ -4791,19 +4791,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_colon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.colon()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.colon()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.colon()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.colon()");
             }
         }
         finally
@@ -4817,19 +4817,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_comma()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.comma()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.comma()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.comma()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.comma()");
             }
         }
         finally
@@ -4843,19 +4843,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_digit()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.digit()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.digit()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.digit()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.digit()");
             }
         }
         finally
@@ -4869,19 +4869,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_dollar()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.dollar()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.dollar()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.dollar()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.dollar()");
             }
         }
         finally
@@ -4895,19 +4895,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_equal()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.equal()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.equal()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.equal()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.equal()");
             }
         }
         finally
@@ -4921,19 +4921,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_gt()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.gt()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.gt()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.gt()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.gt()");
             }
         }
         finally
@@ -4947,19 +4947,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_left_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.left_brace()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.left_brace()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.left_brace()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.left_brace()");
             }
         }
         finally
@@ -4973,19 +4973,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_left_bracket()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.left_bracket()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.left_bracket()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.left_bracket()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.left_bracket()");
             }
         }
         finally
@@ -4999,19 +4999,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_left_paren()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.left_paren()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.left_paren()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.left_paren()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.left_paren()");
             }
         }
         finally
@@ -5025,19 +5025,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_lt()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.lt()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.lt()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.lt()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.lt()");
             }
         }
         finally
@@ -5051,19 +5051,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_period()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.period()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.period()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.period()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.period()");
             }
         }
         finally
@@ -5077,19 +5077,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_right_brace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.right_brace()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.right_brace()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.right_brace()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.right_brace()");
             }
         }
         finally
@@ -5103,19 +5103,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_right_paren()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.right_paren()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.right_paren()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.right_paren()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.right_paren()");
             }
         }
         finally
@@ -5129,19 +5129,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_semicolon()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.semicolon()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.semicolon()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.semicolon()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.semicolon()");
             }
         }
         finally
@@ -5155,19 +5155,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_slash()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.slash()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.slash()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.slash()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.slash()");
             }
         }
         finally
@@ -5181,19 +5181,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_underscore()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.underscore()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.underscore()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.underscore()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.underscore()");
             }
         }
         finally
@@ -5207,19 +5207,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_unicode()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.unicode()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.unicode()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.unicode()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.unicode()");
             }
         }
         finally
@@ -5233,19 +5233,19 @@ public final class SmcLexerContext
 
     private void SourceMap_NeverUsed_whitespace()
     {
-        final int stateId = _state.getId();
+        final int stateId = mState.getId();
 
         try
         {
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.whitespace()");
+                mDebugStream.println("ENTER TRANSITION: SourceMap.NeverUsed.whitespace()");
             }
 
 
-            if (_debugFlag == true)
+            if (mDebugFlag == true)
             {
-                _debugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.whitespace()");
+                mDebugStream.println("EXIT TRANSITION : SourceMap.NeverUsed.whitespace()");
             }
         }
         finally

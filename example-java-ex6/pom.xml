@@ -5,7 +5,7 @@
     <parent>
         <groupId>net.sf.smc</groupId>
         <artifactId>smc</artifactId>
-        <version>${smc.version}</version>
+        <version>7.1.0</version>
     </parent>
 
     <artifactId>example-java-ex6</artifactId>
@@ -18,7 +18,7 @@
         <plugin>
           <groupId>net.sf.smc</groupId>
           <artifactId>smc-maven-plugin</artifactId>
-          <version>${smc.version}</version>
+          <version>${project.version}</version>
 
           <executions>
             <execution>

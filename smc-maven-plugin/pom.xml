@@ -62,7 +62,7 @@
         <plugin>
           <groupId>net.sf.smc</groupId>
           <artifactId>smc-maven-plugin</artifactId>
-          <version>${project.version}</version>
+          <version>7.0.2</version>
 
           <executions>
 

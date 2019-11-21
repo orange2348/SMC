@@ -36,19 +36,40 @@
 
     <build>
       <plugins>
+
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-jar-plugin</artifactId>
-          <version>3.1.2</version>
-          <configuration>
-            <archive>
-              <manifest>
-                <addClasspath>true</addClasspath>
-                <mainClass>net.sf.smc.Smc</mainClass>
-              </manifest>
-            </archive>
-          </configuration>
+          <artifactId>maven-assembly-plugin</artifactId>
+
+          <executions>
+
+            <execution>
+              <phase>package</phase>
+
+              <goals>
+                <goal>single</goal>
+              </goals>
+
+              <configuration>
+
+                <archive>
+                  <manifest>
+                    <mainClass>net.sf.smc.Smc</mainClass>
+                  </manifest>
+                </archive>
+
+                <descriptorRefs>
+                  <descriptorRef>jar-with-dependencies</descriptorRef>
+                </descriptorRefs>
+
+              </configuration>
+
+            </execution>
+
+          </executions>
         </plugin>
+
       </plugins>
     </build>
+
 </project>

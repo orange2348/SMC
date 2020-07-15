@@ -364,11 +364,11 @@ public final class SmcHeaderCGenerator
                 }
                 mTarget.println(") \\");
                 mTarget.println("    do { \\");
-                mTarget.println("    assert(getState(fsm) != NULL); \\");
-                mTarget.print("    setTransition((fsm), \"");
+                mTarget.println("        assert(getState(fsm) != NULL); \\");
+                mTarget.print("        setTransition((fsm), \"");
                 mTarget.print(trans.getName());
                 mTarget.println("\"); \\");
-                mTarget.print("    getState(fsm)->");
+                mTarget.print("        getState(fsm)->");
                 mTarget.print(trans.getName());
                 mTarget.print("((fsm)");
                 for (SmcParameter param: params)
@@ -378,7 +378,7 @@ public final class SmcHeaderCGenerator
                     mTarget.print(")");
                 }
                 mTarget.println("); \\");
-                mTarget.println("    setTransition((fsm), NULL)");
+                mTarget.println("        setTransition((fsm), NULL)");
                 mTarget.println("    } while (0)");
             }
         }

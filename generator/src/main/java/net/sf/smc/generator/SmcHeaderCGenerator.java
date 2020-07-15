@@ -322,10 +322,12 @@ public final class SmcHeaderCGenerator
         mTarget.print("#define ");
         mTarget.print(fsmClassName);
         mTarget.println("_Init(fsm, owner) \\");
-        mTarget.print("    FSM_INIT((fsm), &");
+        mTarget.println("    do { \\");
+        mTarget.print("        FSM_INIT((fsm), &");
         mTarget.print(cState);
         mTarget.println("); \\");
-        mTarget.println("    (fsm)->_owner = (owner)");
+        mTarget.println("        (fsm)->_owner = (owner); \\");
+        mTarget.println("    } while (0)");
 
         // EnterStartState method.
         if (fsm.hasEntryActions())
@@ -334,7 +336,11 @@ public final class SmcHeaderCGenerator
             mTarget.print("#define ");
             mTarget.print(fsmClassName);
             mTarget.println("_EnterStartState(fsm) \\");
-            mTarget.println("    ENTRY_STATE(getState(fsm))");
+            mTarget.println("    do { \\");
+            mTarget.println("        if (getState(fsm)->Entry != NULL) { \\");
+            mTarget.println("            getState(fsm)->Entry(fsm); \\");
+            mTarget.println("        } \\");
+            mTarget.println("    } while (0)");
         }
 
         // Generate a method for every transition in every map
@@ -357,7 +363,7 @@ public final class SmcHeaderCGenerator
                     mTarget.print(param.getName());
                 }
                 mTarget.println(") \\");
-
+                mTarget.println("    do { \\");
                 mTarget.println("    assert(getState(fsm) != NULL); \\");
                 mTarget.print("    setTransition((fsm), \"");
                 mTarget.print(trans.getName());
@@ -373,6 +379,7 @@ public final class SmcHeaderCGenerator
                 }
                 mTarget.println("); \\");
                 mTarget.println("    setTransition((fsm), NULL)");
+                mTarget.println("    } while (0)");
             }
         }
 

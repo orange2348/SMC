@@ -378,7 +378,7 @@ public final class SmcHeaderCGenerator
                     mTarget.print(")");
                 }
                 mTarget.println("); \\");
-                mTarget.println("        setTransition((fsm), NULL)");
+                mTarget.println("        setTransition((fsm), NULL); \\");
                 mTarget.println("    } while (0)");
             }
         }
